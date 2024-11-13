@@ -3,18 +3,17 @@
     padding: 0;
 }
 
-.mainBrands {
+.mainPolicy {
     width: 100vw;
     height: 75vh;
     display: flex;
-    justify-content:space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: black;
     font-family: "GothamOfficeRegular";
     text-transform: uppercase;
     font-size: 1.4em;
+    background-color: yellow;
 }
 
-.carsLogo {
-    width: 400px;
-}
