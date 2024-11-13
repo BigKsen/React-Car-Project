@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "GothamOfficeRegular";
+  text-transform: uppercase;
+  font-size: 1.4em;
+  background-size: cover; /* Utilisation de 'contain' pour inclure complètement l'image */
+  background-position: center center; /* Centre l'image */
+  background-repeat: no-repeat;
+  -webkit-animation: color-change-2x 5s ease-in-out 1s infinite
+    alternate-reverse both;
+  animation: color-change-2x 15s ease-in-out 1s infinite alternate-reverse both;
+}
+
+/**
+ * ----------------------------------------
+ * animation color-change-2x
+ * ----------------------------------------
+ */
+
+@keyframes color-change-2x {
+  0% {
+    background-image: url("../../assets/images/BGR1.png");
+    background-size: cover;
+  }
+
+  25% {
+    background-image: url("../../assets/images/BGR2.png");
+    background-size: cover;
+  }
+
+  50% {
+    background-image: url("../../assets/images/BGR3.png");
+    background-size: cover;
+  }
+
+  75% {
+    background-image: url("../../assets/images/BGR4.png");
+    background-size: cover;
+  }
+
+  100% {
+    background-image: url("../../assets/images/BGR5.png");
+    background-size: cover;
+  }
+}
+
+.readyBtn {
+  margin-top: 3%;
+  padding: 12px 30px;
+  border: 2px solid #d4af37;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
+}
+
+.readyBtn:hover {
+  background-color: #d4af37;
+  color: #ffffff;
+}

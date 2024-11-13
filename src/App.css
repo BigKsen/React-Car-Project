@@ -1,0 +1,74 @@
+/* Gotham */
+
+@font-face {
+  font-family: "GothamRoundedBook";
+  src: url("./assets/fonts/Gotham/GothamRounded-Book.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamRounded-Book.woff2")- format("woff2");
+}
+
+@font-face {
+  font-family: "GothamRoundedMedium";
+  src: url("./assets/fonts/Gotham/GothamRounded-Medium.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamRounded-Medium.woff2")- format("woff2");
+}
+
+@font-face {
+  font-family: "GothamNarrowLight";
+  src: url("./assets/fonts/Gotham/GothamNarrow-Light.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamNarrow-Light.woff2")- format("woff2");
+}
+
+@font-face {
+  font-family: "GothamNarrowBook";
+  src: url("./assets/fonts/Gotham/GothamNarrow-Book.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamNarrow-Book.woff2")- format("woff2");
+}
+
+@font-face {
+  font-family: "GothamNarrowMedium";
+  src: url("./assets/fonts/Gotham/GothamNarrow-Medium.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamNarrow-Medium.woff2")- format("woff2");
+}
+@font-face {
+  font-family: "GothamOfficeRegular";
+  src: url("./assets/fonts/Gotham/GothamOffice-Regular.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamOffice-Regular.woff2")- format("woff2");
+}
+@font-face {
+  font-family: "GothamOfficeBold";
+  src: url("./assets/fonts/Gotham/GothamOffice-Bold.woff") format("woff");
+  src: url("./assets/fonts/Gotham/GothamOffice-Bold.woff2")- format("woff2");
+}
+
+/* Monserrat */
+@font-face {
+  font-family: "MonserratLight";
+  src: url("./assets/fonts/Monserrat/Montserrat-Light.woff") format("woff");
+  src: url("./assets/fonts/Monserrat/Montserrat-Light.woff2")- format("woff2");
+}
+@font-face {
+  font-family: "MonserratRegular";
+  src: url("./assets/fonts/Monserrat/Montserrat-Regular.woff") format("woff");
+  src: url("./assets/fonts/Monserrat/Montserrat-Regular.woff2")- format("woff2");
+}
+@font-face {
+  font-family: "MonserratMedium";
+  src: url("./assets/fonts/Monserrat/Montserrat-Medium.woff") format("woff");
+  src: url("./assets/fonts/Monserrat/Montserrat-Medium.woff2")- format("woff2");
+}
+
+/*
+titles:"MonserratMedium"
+text: "GothamOfficeRegular"
+
+*/
+
+body {
+  font-family: "GothamOfficeRegular";
+  background-color: white;
+  color:#D4AF37;
+}
+
+h1 {
+  font-family: "MonserratMedium";
+}
