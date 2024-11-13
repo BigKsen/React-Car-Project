@@ -1,9 +1,13 @@
+import style from "./Configurator.module.css"
+
 const Configurator = () => {
-  return (
-    <>
-      <h1>Ici c'est les CONFIGURATOR</h1>
-    </>
-  );
+    return (
+        <>
+            <div className={style.mainConfigurator}>
+                <p>Ici c'est le main du Configurator</p>
+            </div>
+        </>
+    );
 };
 
 export default Configurator;

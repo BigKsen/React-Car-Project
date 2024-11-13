@@ -1,10 +1,11 @@
-
+import style from "./Brands.module.css"
 
 const Brands=()=>{
-    return(
+    return (
         <>
-        <h1>C'est la page des marques 🚗</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, corrupti asperiores iusto ab ipsum est optio? Recusandae porro repellendus sit tenetur, nobis consequatur beatae, quo enim dolorum adipisci inventore? Ullam!</p>
+            <div className={style.mainBrands}>
+                <p>Ici c'est le main du Brands</p>
+            </div>
         </>
     );
 }

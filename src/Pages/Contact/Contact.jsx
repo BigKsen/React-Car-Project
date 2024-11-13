@@ -1,7 +1,13 @@
+import style from "./Contact.module.css"
+
+
 const Contact = () => {
   return (
     <>
-      <h1>Ici c'est les CONTACT</h1>
+      <div className={style.mainContact}>
+      <p>Ici c'est le main du contact</p>
+      </div>
+
     </>
   );
 };
