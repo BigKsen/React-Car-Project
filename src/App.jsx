@@ -12,6 +12,7 @@ import Footer from "./Containers/Footer/Footer";
 function App() {
 
   // Exemple de modif à commit
+  // Je boss à I3 !
 
   return (
     <>
