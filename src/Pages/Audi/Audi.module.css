@@ -51,7 +51,7 @@
 }
 
 .A8:hover {
-  background-image: url(../../assets/images/A8icon.png);
+  background-image: url(../../assets/images/AUDI/A8/Ready/Resized/A8icon.png);
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: center;
@@ -63,15 +63,14 @@
   background-image: url(../../assets/images/AUDI/A8/Ready/Resized/RS.avif);
   background-size: cover;
   transition: background-image 0.6s ease-out;
-
 }
 
 .RS:hover {
-    background-image: url(../../assets/images/RSicon.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-image: url(../../assets/images/AUDI/RS/Ready/Resized/RSicon.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .Q7 {
   width: 250px;
@@ -82,11 +81,11 @@
 }
 
 .Q7:hover {
-    background-image: url(../../assets/images/Q7icon.png);
-    background-size: 70%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+  background-image: url(../../assets/images/AUDI/Q7/Ready/Resized/Q7icon.png);
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 p {
   margin-bottom: 3%;

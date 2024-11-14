@@ -18,7 +18,7 @@ const AudiA8 = () => {
         Audi pioneered the use of aluminum in its construction with the Audi Space Frame (ASF) technology, which significantly reduced weight without sacrificing rigidity. 
         Over the years, the A8 has evolved through various generations, with each iteration incorporating more advanced technology, improved performance, and luxurious comfort.   "
           designText="The Audi A8 exemplifies sleek, modern luxury with its bold, minimalist design. Its exterior features a wide, imposing single-frame grille, sharp LED matrix headlights, and flowing, aerodynamic lines that give it an elegant yet commanding presence on the road. 
-        The long wheelbase contributes to its stately proportions and ensures a spacious interior. Inside, the cabin is a masterpiece of craftsmanship, combining high-quality materials like leather, wood, and metal accents. 
+        The long wheelbase contr ibutes to its stately proportions and ensures a spacious interior. Inside, the cabin is a masterpiece of craftsmanship, combining high-quality materials like leather, wood, and metal accents. 
         The minimalist dashboard features touch-sensitive controls and a high-resolution display that complements the overall futuristic aesthetic."
           technologyText="The Audi A8 is a technological powerhouse, equipped with state-of-the-art features that push the boundaries of modern driving. Audi's Virtual Cockpit is standard, providing a fully digital instrument cluster that offers customizable views and navigation. 
         The MMI touch response system controls various functions, allowing the driver and passengers to interact with the vehicle intuitively. 
