@@ -31,13 +31,17 @@ function DBConfigurator() {
       }
 
       const relevantFields = {
-        drive: filteredData.drive,
-        fueltype1: filteredData.fueltype1,
-        trany: filteredData.trany,
-        vclass: filteredData.vclass,
-        year: filteredData.year,
-        atvtype: filteredData.atvtype,
-        evmotor: filteredData.evmotor,
+        Brand: filteredData.make,
+        Model: filteredData.model,
+        Year: filteredData.year,
+        Class: filteredData.vclass,
+        Engine: filteredData.eng_dscr,
+        EMotor: filteredData.evmotor,
+        Cylinders: filteredData.cylinders,
+        Fuel: filteredData.fueltype1,
+        Transmission: filteredData.trany,
+        Drive: filteredData.drive,
+        ATVtype: filteredData.atvtype,
       };
 
       setModelData(relevantFields);
@@ -73,7 +77,11 @@ function DBConfigurator() {
       {isLoading && <p>Loading...</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
       {isVisible && modelData && (
-        <pre>{JSON.stringify(modelData, null, 2)}</pre>
+        <pre>
+          {Object.entries(modelData)
+            .map(([key, value]) => `${key}: ${value === null ? "-" : value}`)
+            .join("\n")}
+        </pre>
       )}
     </div>
   );
