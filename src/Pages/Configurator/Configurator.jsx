@@ -1,13 +1,18 @@
-import style from "./Configurator.module.css"
+import React from "react";
+import { SelectedProvider } from "../../Composants/SelectedContext";
+import DBConfigurator from "../../Composants/DBConfigurator/DBConfigurator";
+import SelectorConfigurator from "../../Composants/SelectorConfigurator/SelectorConfigurator";
 
 const Configurator = () => {
-    return (
-        <>
-            <div className={style.mainConfigurator}>
-                <p>Ici c'est le main du Configurator</p>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <SelectedProvider>
+        <div>
+          <SelectorConfigurator />
+          <DBConfigurator />
+        </div>
+      </SelectedProvider>
+    </>
+  );
 };
-
 export default Configurator;
