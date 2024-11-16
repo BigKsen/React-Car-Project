@@ -10,6 +10,8 @@ export const SelectedProvider = ({ children }) => {
   const [selectedModel, setSelectedModel] = useState("");
   const [selectedExterior, setSelectedExterior] = useState("");
   const [selectedInterior, setSelectedInterior] = useState("");
+  const [selectedWheels, setSelectedWheels] = useState("");
+  const [selectedHighlights, setSelectedHighlights] = useState("");
   const [modelData, setModelData] = useState(null);
 
   const resetModelData = () => {
@@ -17,6 +19,8 @@ export const SelectedProvider = ({ children }) => {
     setSelectedModel("");
     setSelectedExterior("");
     setSelectedInterior("");
+    setSelectedWheels("");
+    setSelectedHighlights("");
     setModelData(null);
   };
 
@@ -31,6 +35,10 @@ export const SelectedProvider = ({ children }) => {
         setSelectedExterior,
         selectedInterior,
         setSelectedInterior,
+        selectedWheels,
+        setSelectedWheels,
+        selectedHighlights,
+        setSelectedHighlights,
         modelData,
         setModelData,
         resetModelData,

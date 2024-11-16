@@ -11,6 +11,10 @@ function SelectorConfigurator() {
     setSelectedExterior,
     selectedInterior,
     setSelectedInterior,
+    selectedWheels, // Nouveau state pour les jantes
+    setSelectedWheels, // Nouveau setter pour les jantes
+    selectedHighlights, // Nouveau state pour les phares
+    setSelectedHighlights, // Nouveau setter pour les phares
     resetModelData,
   } = useSelected();
 
@@ -43,17 +47,25 @@ function SelectorConfigurator() {
     RS: ["Black", "Orange"],
   };
 
+  // Options pour les jantes et les phares
+  const wheelOptions = ['20"', '21"', '22"'];
+  const highlightOptions = ["HID Xenon", "LED", "Matrix LED", "Laser"];
+
   const handleBrandChange = (e) => {
     setSelectedBrand(e.target.value);
     setSelectedModel(""); // Réinitialise le modèle
     setSelectedExterior(""); // Réinitialise l'exterieur
     setSelectedInterior(""); // Réinitialise l'intérieur
+    setSelectedWheels(""); // Réinitialise les jantes
+    setSelectedHighlights(""); // Réinitialise les phares
   };
 
   const handleModelChange = (e) => {
     setSelectedModel(e.target.value);
     setSelectedExterior(""); // Réinitialise l'exterieur
     setSelectedInterior(""); // Réinitialise l'intérieur
+    setSelectedWheels(""); // Réinitialise les jantes
+    setSelectedHighlights(""); // Réinitialise les phares
   };
 
   const currentModelOptions = selectedBrand ? modelOptions[selectedBrand] : [];
@@ -120,6 +132,36 @@ function SelectorConfigurator() {
           {currentInteriorOptions.map((interior) => (
             <option key={interior} value={interior}>
               {interior}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label>
+        Wheels:
+        <select
+          value={selectedWheels}
+          onChange={(e) => setSelectedWheels(e.target.value)}
+          disabled={!selectedModel}>
+          <option value="">Select wheel size</option>
+          {wheelOptions.map((wheel) => (
+            <option key={wheel} value={wheel}>
+              {wheel}
+            </option>
+          ))}
+        </select>
+      </label>
+
+      <label>
+        Highlights:
+        <select
+          value={selectedHighlights}
+          onChange={(e) => setSelectedHighlights(e.target.value)}
+          disabled={!selectedModel}>
+          <option value="">Select headlight type</option>
+          {highlightOptions.map((highlight) => (
+            <option key={highlight} value={highlight}>
+              {highlight}
             </option>
           ))}
         </select>
