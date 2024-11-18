@@ -14,36 +14,38 @@ export const SelectedProvider = ({ children }) => {
   const [selectedHighlights, setSelectedHighlights] = useState("");
   const [modelData, setModelData] = useState(null);
 
-  const resetModelData = () => {
-    setSelectedBrand("");
+const resetAll = () => {
+    setSelectedBrand(""); // Utilisez une chaîne vide plutôt que null si vous avez besoin de valeurs vides
     setSelectedModel("");
     setSelectedExterior("");
     setSelectedInterior("");
     setSelectedWheels("");
     setSelectedHighlights("");
-    setModelData(null);
-  };
+    setModelData(null); // Cela peut rester `null` si vous voulez supprimer les données du modèle
+};
+
 
   return (
-    <SelectedContext.Provider
-      value={{
-        selectedBrand,
-        setSelectedBrand,
-        selectedModel,
-        setSelectedModel,
-        selectedExterior,
-        setSelectedExterior,
-        selectedInterior,
-        setSelectedInterior,
-        selectedWheels,
-        setSelectedWheels,
-        selectedHighlights,
-        setSelectedHighlights,
-        modelData,
-        setModelData,
-        resetModelData,
-      }}>
-      {children}
-    </SelectedContext.Provider>
+      <SelectedContext.Provider
+          value={{
+              selectedBrand,
+              setSelectedBrand,
+              selectedModel,
+              setSelectedModel,
+              selectedExterior,
+              setSelectedExterior,
+              selectedInterior,
+              setSelectedInterior,
+              selectedWheels,
+              setSelectedWheels,
+              selectedHighlights,
+              setSelectedHighlights,
+              modelData,
+              setModelData, // Fournir la fonction de mise à jour
+              resetAll, // Fournir la fonction de réinitialisation
+          }}
+      >
+          {children}
+      </SelectedContext.Provider>
   );
 };

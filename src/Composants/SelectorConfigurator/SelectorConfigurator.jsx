@@ -15,7 +15,6 @@ function SelectorConfigurator() {
     setSelectedWheels, // Nouveau setter pour les jantes
     selectedHighlights, // Nouveau state pour les phares
     setSelectedHighlights, // Nouveau setter pour les phares
-    resetModelData,
   } = useSelected();
 
   const brandOptions = ["Mercedes-Benz", "BMW", "Audi"];

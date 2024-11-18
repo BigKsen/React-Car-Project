@@ -5,7 +5,8 @@ const Contact = () => {
   return (
     <>
       <div className={style.mainContact}>
-      <p>Ici c'est le main du contact</p>
+      <p>Composant:carte de visite</p>
+      <p>Composant Form</p>
       </div>
 
     </>
