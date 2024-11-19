@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Summery.module.css";
+import {useNavigate} from "react-router-dom";
 import {useSelected} from "../../Composants/SelectedContext"; // Import du contexte
 
 const Summery = () => {
@@ -13,6 +14,14 @@ const Summery = () => {
         selectedHighlights,
         modelData,
     } = useSelected();
+
+    // Initialisation du hook useNavigate pour la redirection
+    const navigate = useNavigate();
+
+    // Fonction pour gérer le clic sur le bouton BOOK
+    const handleBook = () => {
+        navigate("/form"); // Redirige vers la page Form
+    };
 
     return (
         <div>
@@ -63,7 +72,9 @@ const Summery = () => {
                 </tbody>
             </table>
 
-            <button className={style.bookButton}>BOOK</button>
+            <button on onClick={handleBook} className={style.bookButton}>
+                BOOK
+            </button>
         </div>
     );
 };

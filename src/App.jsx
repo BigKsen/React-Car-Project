@@ -13,6 +13,8 @@ import AudiA8 from "./Pages/Audi/AudiA8";
 import AudiRS from "./Pages/Audi/AudiRS";
 import AudiQ7 from "./Pages/Audi/AudiQ7";
 import Summery from "./Pages/Summery/Summery";
+import Form from "./Composants/Form/Form";
+import Final from "./Pages/Final/Final";
 import {SelectedProvider} from "./Composants/SelectedContext";
 
 function App() {
@@ -31,6 +33,9 @@ function App() {
                     <Route path="/Audi/AudiRS" element={<AudiRS />} />
                     <Route path="/Audi/AudiQ7" element={<AudiQ7 />} />
                     <Route path="/summery" element={<Summery />} />
+                    <Route path="/form" element={<Form />} />
+                    <Route path="/final" element={<Final />} />
+
                 </Routes>
                 <Footer />
         </Router>

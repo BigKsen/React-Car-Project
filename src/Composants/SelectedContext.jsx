@@ -14,6 +14,19 @@ export const SelectedProvider = ({ children }) => {
   const [selectedHighlights, setSelectedHighlights] = useState("");
   const [modelData, setModelData] = useState(null);
 
+
+// Fonction pour mettre à jour la sélection (à utiliser dans Summery ou ailleurs)
+  const updateSelection = (newSelection) => {
+    setSelectedBrand(newSelection.brand);
+    setSelectedModel(newSelection.model);
+    setSelectedExterior(newSelection.exterior);
+    setSelectedInterior(newSelection.interior);
+    setSelectedWheels(newSelection.wheels);
+    setSelectedHighlights(newSelection.highlights);
+    setModelData(newSelection.modelData)
+  }
+
+
 const resetAll = () => {
     setSelectedBrand(""); // Utilisez une chaîne vide plutôt que null si vous avez besoin de valeurs vides
     setSelectedModel("");

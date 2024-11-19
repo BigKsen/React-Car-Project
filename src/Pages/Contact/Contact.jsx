@@ -1,12 +1,13 @@
 import style from "./Contact.module.css"
+import Form from "../../Composants/Form/Form";
 
 
 const Contact = () => {
   return (
     <>
       <div className={style.mainContact}>
-      <p>Composant:carte de visite</p>
-      <p>Composant Form</p>
+      <p>1 Composant:carte de visite</p>
+      Form
       </div>
 
     </>
@@ -14,3 +15,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
