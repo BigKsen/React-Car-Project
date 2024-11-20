@@ -1,5 +1,6 @@
 import ContactForm from "../../Composants/ContactForm/ContactForm";
 import style from "./Contact.module.css"
+import Saloon from "../../assets/images/saloon.avif"
 
 
 const Contact = () => {
@@ -14,7 +15,7 @@ const contactForm =()=>{
       <>
           <div className={style.mainContact}>
               <div className={style.visitCard}>
-                  <img src="" alt="dealers saloon" />
+                  <img src={Saloon} alt="dealers saloon" />
                   <table>
                       <tr>
                           <td>Address</td>
