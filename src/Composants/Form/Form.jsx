@@ -26,32 +26,69 @@ const Form = () => {
     // Le texte à afficher dans l'élément <h1>
     const h1 = `Booking for ${selectedBrand || "Unknown Brand"} ${selectedModel || "Unknown Model"}`;
 
-    // Fonction pour gérer la soumission du formulaire et rediriger vers FINAL
-    const handleConfirm = (event) => {
-        event.preventDefault(); // Empêche le rechargement de la page
+    // Fonction pour gérer la soumission du formulaire
+  const handleSubmit = async (e) => {
+      e.preventDefault(); // Empêche le rechargement de la page
 
-        // Vous pouvez traiter ici les données du formulaire si nécessaire
-        const formData = {
-            firstName,
-            secondName,
-            tel,
-            email,
-        };
+      // Données du formulaire
+      const formData = {
+          firstName,
+          secondName,
+          tel,
+          email,
+      };
 
-        // Vous pouvez aussi ajouter ces données à un fichier JSON ou les passer via un contexte
+      // Données sélectionnées
+      const selectedData = {
+          selectedBrand,
+          selectedModel,
+          selectedExterior,
+          selectedInterior,
+          selectedWheels,
+          selectedHighlights,
+      };
 
-        // Redirection vers la page FINAL
-        navigate("/final", {
-            state: {
-                formData,
-                selectedBrand,
-                selectedModel,
-                selectedExterior,
-                selectedInterior,
-                selectedWheels,
-                selectedHighlights,
-            },
-        });
+      // Fusionner formData et selectedData dans un seul objet
+      const dataToSend = {
+          ...formData,
+          ...selectedData,
+      };
+
+      try {
+          // Envoi des données au backend
+          const response = await fetch("http://localhost:8000/users", {
+              method: "POST",
+              headers: {
+                  "Content-Type": "application/json",
+              },
+              body: JSON.stringify(dataToSend),
+          });
+
+          if (!response.ok) {
+              throw new Error("Failed to save data");
+          }
+
+          alert("Data saved successfully!");
+
+          // Redirection vers la page FINAL
+          navigate("/final", {
+              state: {
+                  formData,
+                  selectedData,
+              },
+          });
+      } catch (error) {
+          console.error("Error saving data:", error);
+          alert("Failed to save data.");
+      }
+  };
+
+    // Fonction pour réinitialiser les champs du formulaire
+    const handleReset = () => {
+        setFirstName("");
+        setSecondName("");
+        setTel("");
+        setEmail("");
     };
 
     return (
@@ -83,29 +120,8 @@ const Form = () => {
                 </ul>
             </div>
 
-            {/* Affichage de modelData si disponible */}
-            <div>
-                <h3>Model Details:</h3>
-                {modelData ? (
-                    <table>
-                        <tbody>
-                            {Object.entries(modelData).map(([key, value]) => (
-                                <tr key={key}>
-                                    <td>
-                                        <strong>{key}:</strong>
-                                    </td>
-                                    <td>{value || "-"}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-                ) : (
-                    <p>No model details available</p>
-                )}
-            </div>
-
             {/* Formulaire */}
-            <form onSubmit={handleConfirm}>
+            <form onSubmit={handleSubmit}>
                 <label htmlFor="firstName">First Name</label>
                 <input
                     type="text"
@@ -131,7 +147,9 @@ const Form = () => {
                 <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
                 <button type="submit">CONFIRM</button>
-                <button type="reset">RESET</button>
+                <button type="button" onClick={handleReset}>
+                    RESET
+                </button>
             </form>
         </div>
     );

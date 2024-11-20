@@ -72,7 +72,7 @@ const Summery = () => {
                 </tbody>
             </table>
 
-            <button on onClick={handleBook} className={style.bookButton}>
+            <button onClick={handleBook} className={style.bookButton}>
                 BOOK
             </button>
         </div>

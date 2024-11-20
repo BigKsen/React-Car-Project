@@ -1,0 +1,44 @@
+[
+  {
+    "firstName": "Martine",
+    "secondName": "Ksenia",
+    "tel": "0487/511.766",
+    "email": "ksenia.kozjanova@hotmail.com"
+  },
+  {
+    "firstName": "Ksenia",
+    "secondName": "Kozjanova",
+    "tel": "0487/511.766",
+    "email": "russian_speed@hotmail.com"
+  },
+  {
+    "firstName": "Nina",
+    "secondName": "Kasianova",
+    "tel": "0498/33.69.22",
+    "email": "nusia@inbox.ru"
+  },
+  {
+    "firstName": "Nina",
+    "secondName": "Kasianova",
+    "tel": "0498/33.69.22",
+    "email": "nusia@inbox.ru",
+    "selectedBrand": "Mercedes-Benz",
+    "selectedModel": "CLE",
+    "selectedExterior": "Black",
+    "selectedInterior": "Camel",
+    "selectedWheels": "20\"",
+    "selectedHighlights": "HID Xenon"
+  },
+  {
+    "firstName": "Martin",
+    "secondName": "Vandendonck",
+    "tel": "0400/25.55.77",
+    "email": "martin@vdd.com",
+    "selectedBrand": "BMW",
+    "selectedModel": "XM",
+    "selectedExterior": "Black",
+    "selectedInterior": "Orange",
+    "selectedWheels": "22\"",
+    "selectedHighlights": "Laser"
+  }
+]
