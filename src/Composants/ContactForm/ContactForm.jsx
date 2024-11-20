@@ -1,0 +1,137 @@
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom"; // Import du hook useNavigate
+
+const ContactForm = () => {
+    // États pour chaque champ du formulaire
+    const [firstNameContact, setfirstNameContact] = useState("");
+    const [lastNameContact, setlastNameContact] = useState("");
+    const [telephoneContact, settelephoneContact] = useState("");
+    const [emailContact, setemailContact] = useState("");
+    const [messageContact, setmessageContact] = useState("");
+
+    // Récupération du navigate (hook de redirection)
+    const navigate = useNavigate();
+
+    // Fonction pour gérer la soumission du formulaire
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Empêcher le rechargement de la page
+
+        // Créer un objet avec toutes les données du formulaire
+        const formData = {
+            firstNameContact,
+            lastNameContact,
+            telephoneContact,
+            emailContact,
+            messageContact,
+        };
+
+        // Envoyer les données du formulaire au serveur
+        fetch("http://localhost:8000/users", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Success:", data);
+            alert("Your data has been submitted successfully!");
+            handleReset(); // Réinitialiser les champs après soumission
+            navigate("/final")
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            alert("There was an error submitting your data.");
+        });
+        
+
+        // Réinitialiser les champs du formulaire après soumission
+        handleReset();
+    };
+
+    // Fonction pour réinitialiser le formulaire
+    const handleReset = () => {
+        setfirstNameContact("");
+        setlastNameContact("");
+        settelephoneContact("");
+        setemailContact("");
+        setmessageContact("");
+    };
+
+    return (
+        <div className="form-container">
+            <h2>Contact Us:</h2>
+
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label htmlFor="firstNameContact">First Name</label>
+                    <input
+                        type="text"
+                        id="firstNameContact"
+                        name="firstNameContact"
+                        value={firstNameContact}
+                        onChange={(e) => setfirstNameContact(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="lastNameContact">Last Name</label>
+                    <input
+                        type="text"
+                        id="lastNameContact"
+                        name="lastNameContact"
+                        value={lastNameContact}
+                        onChange={(e) => setlastNameContact(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="telephoneContact">Telephone</label>
+                    <input
+                        type="tel"
+                        id="telephoneContact"
+                        name="telephoneContact"
+                        value={telephoneContact}
+                        onChange={(e) => settelephoneContact(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="emailContact">Email</label>
+                    <input
+                        type="emailContact"
+                        id="emailContact"
+                        name="emailContact"
+                        value={emailContact}
+                        onChange={(e) => setemailContact(e.target.value)}
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="messageContact">Message</label>
+                    <textarea
+                        id="messageContact"
+                        name="messageContact"
+                        value={messageContact}
+                        onChange={(e) => setmessageContact(e.target.value)}
+                        required
+                    ></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">SEND</button>
+                    <button type="button" onClick={handleReset}>
+                        RESET
+                    </button>
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default ContactForm;

@@ -122,6 +122,7 @@ const Form = () => {
 
             {/* Formulaire */}
             <form onSubmit={handleSubmit}>
+                <h3>Personal Data:</h3>
                 <label htmlFor="firstName">First Name</label>
                 <input
                     type="text"

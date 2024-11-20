@@ -1,8 +1,15 @@
+import ContactForm from "../../Composants/ContactForm/ContactForm";
 import style from "./Contact.module.css"
-import Form from "../../Composants/Form/Form";
 
 
 const Contact = () => {
+
+const contactForm =()=>{
+
+
+
+}
+
   return (
       <>
           <div className={style.mainContact}>
@@ -27,7 +34,7 @@ const Contact = () => {
                       </tr>
                   </table>
               </div>
-              <div className={style.contactForm}><Form/></div>
+              <div className={style.contactForm}><ContactForm/></div>
           </div>
       </>
   );
