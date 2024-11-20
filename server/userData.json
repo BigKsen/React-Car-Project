@@ -40,5 +40,29 @@
     "selectedInterior": "Orange",
     "selectedWheels": "22\"",
     "selectedHighlights": "Laser"
+  },
+  {
+    "firstName": "Nina",
+    "secondName": "Kasianova",
+    "tel": "0487/511.766",
+    "email": "dupont@gmail.com",
+    "selectedBrand": "Mercedes-Benz",
+    "selectedModel": "CLE",
+    "selectedExterior": "Black",
+    "selectedInterior": "Camel",
+    "selectedWheels": "21\"",
+    "selectedHighlights": "LED"
+  },
+  {
+    "firstName": "Martine",
+    "secondName": "Ksenia",
+    "tel": "0487/511.766",
+    "email": "dupont@gmail.com",
+    "selectedBrand": "Mercedes-Benz",
+    "selectedModel": "CLE",
+    "selectedExterior": "Grey",
+    "selectedInterior": "Camel",
+    "selectedWheels": "21\"",
+    "selectedHighlights": "LED"
   }
 ]
