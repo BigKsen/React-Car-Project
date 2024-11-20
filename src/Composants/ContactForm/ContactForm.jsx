@@ -25,26 +25,31 @@ const ContactForm = () => {
             messageContact,
         };
 
-        // Envoyer les données du formulaire au serveur
+        // Créer un objet qui inclut le titre et les données du formulaire
+        const dataToSend = {
+            title: "CONTACT Request", // Ajouter le titre ici
+            formData, // Inclure les données du formulaire
+        };
+
+        // Envoyer les données au serveur
         fetch("http://localhost:8000/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(dataToSend), // Envoyer le nouvel objet
         })
         .then((response) => response.json())
         .then((data) => {
             console.log("Success:", data);
             alert("Your data has been submitted successfully!");
             handleReset(); // Réinitialiser les champs après soumission
-            navigate("/final")
+            navigate("/final");
         })
         .catch((error) => {
             console.error("Error:", error);
             alert("There was an error submitting your data.");
         });
-        
 
         // Réinitialiser les champs du formulaire après soumission
         handleReset();
@@ -103,7 +108,7 @@ const ContactForm = () => {
                 <div>
                     <label htmlFor="emailContact">Email</label>
                     <input
-                        type="emailContact"
+                        type="email"
                         id="emailContact"
                         name="emailContact"
                         value={emailContact}

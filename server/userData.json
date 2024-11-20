@@ -1,158 +1,29 @@
 [
   {
-    "firstName": "Martine",
-    "secondName": "Ksenia",
-    "tel": "0487/511.766",
-    "email": "ksenia.kozjanova@hotmail.com"
+    "title": " BOOKING Request",
+    "formData": {
+      "firstName": "X",
+      "secondName": "X",
+      "tel": "0487/511.766",
+      "email": "dupont@gmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "i7",
+      "selectedExterior": "Blue",
+      "selectedInterior": "Black/White",
+      "selectedWheels": "20\"",
+      "selectedHighlights": "LED"
+    }
   },
   {
-    "firstName": "Ksenia",
-    "secondName": "Kozjanova",
-    "tel": "0487/511.766",
-    "email": "russian_speed@hotmail.com"
-  },
-  {
-    "firstName": "Nina",
-    "secondName": "Kasianova",
-    "tel": "0498/33.69.22",
-    "email": "nusia@inbox.ru"
-  },
-  {
-    "firstName": "Nina",
-    "secondName": "Kasianova",
-    "tel": "0498/33.69.22",
-    "email": "nusia@inbox.ru",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "CLE",
-    "selectedExterior": "Black",
-    "selectedInterior": "Camel",
-    "selectedWheels": "20\"",
-    "selectedHighlights": "HID Xenon"
-  },
-  {
-    "firstName": "Martin",
-    "secondName": "Vandendonck",
-    "tel": "0400/25.55.77",
-    "email": "martin@vdd.com",
-    "selectedBrand": "BMW",
-    "selectedModel": "XM",
-    "selectedExterior": "Black",
-    "selectedInterior": "Orange",
-    "selectedWheels": "22\"",
-    "selectedHighlights": "Laser"
-  },
-  {
-    "firstName": "Nina",
-    "secondName": "Kasianova",
-    "tel": "0487/511.766",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "CLE",
-    "selectedExterior": "Black",
-    "selectedInterior": "Camel",
-    "selectedWheels": "21\"",
-    "selectedHighlights": "LED"
-  },
-  {
-    "firstName": "Martine",
-    "secondName": "Ksenia",
-    "tel": "0487/511.766",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "CLE",
-    "selectedExterior": "Grey",
-    "selectedInterior": "Camel",
-    "selectedWheels": "21\"",
-    "selectedHighlights": "LED"
-  },
-  {
-    "firstNameContact": "Alain",
-    "lastNameContact": "Del",
-    "telephoneContact": "0400/000.000",
-    "emailContact": "alain@gmail.com",
-    "messageContact": "Pouvez-vous me recontacter au numéro indiqué?"
-  },
-  {
-    "firstNameContact": "Ksen",
-    "lastNameContact": "Ksen",
-    "telephoneContact": "4",
-    "emailContact": "russian_speed@hotmail.com",
-    "messageContact": "Check"
-  },
-  {
-    "firstNameContact": "Alain",
-    "lastNameContact": "Del",
-    "telephoneContact": "0400/000.000",
-    "emailContact": "alain@gmail.com",
-    "messageContact": "dgqdsgqsgd"
-  },
-  {
-    "firstName": "fbsd",
-    "secondName": "dsqbdq",
-    "tel": "dbdq",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "GLE",
-    "selectedExterior": "White",
-    "selectedInterior": "Camel",
-    "selectedWheels": "20\"",
-    "selectedHighlights": "LED"
-  },
-  {
-    "firstNameContact": "Alain",
-    "lastNameContact": "Del",
-    "telephoneContact": "0400/000.000",
-    "emailContact": "alain@gmail.com",
-    "messageContact": "Nouveau check"
-  },
-  {
-    "firstNameContact": "Z",
-    "lastNameContact": "Z",
-    "telephoneContact": "Z",
-    "emailContact": "alain@gmail.com",
-    "messageContact": "Z"
-  },
-  {
-    "firstName": "T",
-    "secondName": "T",
-    "tel": "0487/511.766",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "BMW",
-    "selectedModel": "i7",
-    "selectedExterior": "Red",
-    "selectedInterior": "Black/White",
-    "selectedWheels": "22\"",
-    "selectedHighlights": "Matrix LED"
-  },
-  {
-    "firstNameContact": "Q",
-    "lastNameContact": "Q",
-    "telephoneContact": "0400/000.000",
-    "emailContact": "alain@gmail.com",
-    "messageContact": "Q"
-  },
-  {
-    "firstName": "vqdsv",
-    "secondName": "qsvq",
-    "tel": "0487/511.766",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "GLE",
-    "selectedExterior": "Black",
-    "selectedInterior": "Camel",
-    "selectedWheels": "21\"",
-    "selectedHighlights": "HID Xenon"
-  },
-  {
-    "firstName": "F",
-    "secondName": "F",
-    "tel": "0487/511.766",
-    "email": "dupont@gmail.com",
-    "selectedBrand": "Mercedes-Benz",
-    "selectedModel": "CLE",
-    "selectedExterior": "Black",
-    "selectedInterior": "Camel",
-    "selectedWheels": "20\"",
-    "selectedHighlights": "HID Xenon"
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "Y",
+      "lastNameContact": "Y",
+      "telephoneContact": "0400/000.000",
+      "emailContact": "alain@gmail.com",
+      "messageContact": "Y"
+    }
   }
 ]

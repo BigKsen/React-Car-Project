@@ -28,9 +28,9 @@ const Form = () => {
 
     // Fonction pour gérer la soumission du formulaire
   const handleSubmit = async (e) => {
-      e.preventDefault(); // Empêche le rechargement de la page
+      e.preventDefault(); // Prevent page reload
 
-      // Données du formulaire
+      // Form data
       const formData = {
           firstName,
           secondName,
@@ -38,7 +38,7 @@ const Form = () => {
           email,
       };
 
-      // Données sélectionnées
+      // Selected data
       const selectedData = {
           selectedBrand,
           selectedModel,
@@ -48,29 +48,30 @@ const Form = () => {
           selectedHighlights,
       };
 
-      // Fusionner formData et selectedData dans un seul objet
+      // Combine all data and wrap with a title
       const dataToSend = {
-          ...formData,
-          ...selectedData,
+          title: " BOOKING Request", // Adding the title here
+          formData,
+          selectedData,
       };
 
       try {
-          // Envoi des données au backend
+          // Send data to the backend
           const response = await fetch("http://localhost:8000/users", {
               method: "POST",
               headers: {
                   "Content-Type": "application/json",
               },
-              body: JSON.stringify(dataToSend),
+              body: JSON.stringify(dataToSend), // Send the wrapped data
           });
 
           if (!response.ok) {
               throw new Error("Failed to save data");
           }
 
-          alert("Data saved successfully!");
+          alert("Your data has been submitted successfully!");
 
-          // Redirection vers la page FINAL
+          // Navigate to the FINAL page
           navigate("/final", {
               state: {
                   formData,
@@ -82,6 +83,7 @@ const Form = () => {
           alert("Failed to save data.");
       }
   };
+
 
     // Fonction pour réinitialiser les champs du formulaire
     const handleReset = () => {
