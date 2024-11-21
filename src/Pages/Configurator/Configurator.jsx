@@ -3,7 +3,9 @@ import {useNavigate} from "react-router-dom";
 import {useSelected} from "../../Composants/SelectedContext"; // Assurez-vous que vous importez le hook correctement
 import SelectorConfigurator from "../../Composants/SelectorConfigurator/SelectorConfigurator";
 
+
 const Configurator = () => {
+
     const navigate = useNavigate();
     const {
         selectedBrand,
@@ -18,8 +20,6 @@ const Configurator = () => {
 
     // Fonction pour charger les données JSON via l'API
     const fetchModelData = async () => {
-    
-
         try {
             const response = await fetch("http://localhost:8000/options");
             if (!response.ok) {
@@ -33,19 +33,19 @@ const Configurator = () => {
                 throw new Error(`No data found for model: ${selectedModel}`);
             }
 
-                   const relevantFields = {
-                       Brand: filteredData.make || "-",
-                       Model: filteredData.model || "-",
-                       Year: filteredData.year || "-",
-                       Class: filteredData.vclass || "-",
-                       Engine: filteredData.eng_dscr || "-",
-                       EMotor: filteredData.evmotor || "-",
-                       Cylinders: filteredData.cylinders || "-",
-                       Fuel: filteredData.fueltype1 || "-",
-                       Transmission: filteredData.trany || "-",
-                       Drive: filteredData.drive || "-",
-                       ATVtype: filteredData.atvtype || "-",
-                   };
+            const relevantFields = {
+                Brand: filteredData.make || "-",
+                Model: filteredData.model || "-",
+                Year: filteredData.year || "-",
+                Class: filteredData.vclass || "-",
+                Engine: filteredData.eng_dscr || "-",
+                EMotor: filteredData.evmotor || "-",
+                Cylinders: filteredData.cylinders || "-",
+                Fuel: filteredData.fueltype1 || "-",
+                Transmission: filteredData.trany || "-",
+                Drive: filteredData.drive || "-",
+                ATVtype: filteredData.atvtype || "-",
+            };
 
             setModelData(relevantFields); // Stocke les données dans le contexte
         } catch (err) {

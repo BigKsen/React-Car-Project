@@ -16,11 +16,12 @@ import Summery from "./Pages/Summery/Summery";
 import Form from "./Composants/Form/Form";
 import Final from "./Pages/Final/Final";
 import {SelectedProvider} from "./Composants/SelectedContext";
+import BackBtn from "./Composants/BackBtn/BackBtn";
 
 function App() {
     return (
-            <SelectedProvider>
-        <Router>
+        <SelectedProvider>
+            <Router>
                 <Header />
                 <Routes>
                     <Route path="/" element={<Main />} />
@@ -35,11 +36,11 @@ function App() {
                     <Route path="/summery" element={<Summery />} />
                     <Route path="/form" element={<Form />} />
                     <Route path="/final" element={<Final />} />
-
+                    <Route path="/backpage" element={<BackBtn />} />
                 </Routes>
                 <Footer />
-        </Router>
-            </SelectedProvider>
+            </Router>
+        </SelectedProvider>
     );
 }
 
