@@ -14,9 +14,9 @@ main {
     font-family: "GothamOfficeRegular";
     text-transform: uppercase;
     font-size: 1.4em;
-    background-image: url("../../assets/images/new.jpeg");
-    background-size: contain; /* Utilisation de 'contain' pour inclure complètement l'image */
-    background-position: center center; /* Centre l'image */
+    background-image: url("../../assets/images/BGR1.avif");
+    background-size: cover; /* Utilisation de 'contain' pour inclure complètement l'image */
+    background-position: center 20%;
     background-repeat: no-repeat;
     transition: background-image 0.8s ease-in-out; /* Transition plus fluide */
     -webkit-animation: color-change-2x 15s ease-in-out 1s infinite alternate-reverse both;
@@ -30,30 +30,34 @@ main {
  */
 @keyframes color-change-2x {
     0% {
-        background-image: url("../../assets/images/new.jpeg");
+        background-image: url("../../assets/images/BGR1.avif");
     }
 
-    25% {
-        background-image: url("../../assets/images/new2.jpeg");
+    20% {
+        background-image: url("../../assets/images/BGR2.avif");
     }
 
-    50% {
-        background-image: url("../../assets/images/new3.jpeg");
+    40% {
+        background-image: url("../../assets/images/BGR3.avif");
     }
 
-    75% {
-        background-image: url("../../assets/images/new.jpeg");
+    60% {
+        background-image: url("../../assets/images/BGR4.avif");
+    }
+
+    80% {
+        background-image: url("../../assets/images/BGR5.avif"); /* Boucle vers le début */
     }
 
     100% {
-        background-image: url("../../assets/images/new.jpeg"); /* Boucle vers le début */
+        background-image: url("../../assets/images/BGR1.avif"); /* Boucle vers le début */
     }
 }
 
 .readyBtn {
     margin-top: 3%;
     padding: 12px 30px;
-    border: 2px solid #d4af37;
+    border: 2px solid #b3911f;
     border-radius: 3px;
     background: #ffffff;
     color: #000000;
@@ -65,6 +69,6 @@ main {
 }
 
 .readyBtn:hover {
-    background-color: #d4af37;
+    background-color: #b3911f;
     color: #ffffff;
 }

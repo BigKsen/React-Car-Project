@@ -25,5 +25,25 @@
       "emailContact": "alain@gmail.com",
       "messageContact": "Y"
     }
+  },
+  {
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "cfv v",
+      "lastNameContact": "vcx nxc",
+      "telephoneContact": "0400/000.000",
+      "emailContact": "alain@gmail.com",
+      "messageContact": "xwvb<xv"
+    }
+  },
+  {
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "cxwb q",
+      "lastNameContact": "xv",
+      "telephoneContact": "0400/000.000",
+      "emailContact": "alain@gmail.com",
+      "messageContact": "xv <vx<w"
+    }
   }
 ]

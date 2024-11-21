@@ -1,4 +1,4 @@
-import GearsImg from "../../assets/images/GearsFinal.png";
+import GearsImg from "../../assets/images/GearsFinal.avif";
 
 const Final = () => {
     return (

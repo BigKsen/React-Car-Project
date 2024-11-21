@@ -1,47 +1,47 @@
 header {
-  width: 100vw;
-  height: 15vh;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  color: black;
-  font-family: "GothamOfficeRegular";
-  font-size: 1.1em;
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    font-family: "GothamOfficeRegular";
+    font-size: 1.1em;
 }
 
 .empty,
 .generalLogo,
 .menu {
-  width: 33%;
-  height: 15vh;
-  text-align: center;
+    width: 33%;
+    height: 15vh;
+    text-align: center;
 }
 
 .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu > ul {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.1em;
-  list-style-type: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+    list-style-type: none;
 }
 
 .menu a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 .menu a.active {
-  color: #d4af37;
-  text-decoration: underline;
+    color: #b3911f;
+    text-decoration: underline;
 }
 
 .menu a:hover {
-  color: #d4af37;
+    color: #b3911f;
 }
