@@ -1,25 +1,11 @@
 import style from "./Audi.module.css";
 import AudiLogotype from "../../assets/images/AudiLogo.avif";
 import { Link } from "react-router-dom";
-import AudiA8 from "./AudiA8";
-import AudiQ7 from "./AudiQ7";
-import AudiRS from "./AudiRS";
+
 import BackBtn from "../../Composants/BackBtn/BackBtn";
-import {useNavigate, useLocation} from "react-router-dom";
 
 const Audi = () => {
-    //states
-    const navigate = useNavigate();
-    const location = useLocation();
 
-    //comportements
-    const handleBack = () => {
-        if (location.key) {
-            navigate(-1);
-        } else {
-            navigate("/");
-        }
-    };
     return (
         <>
             <BackBtn />
