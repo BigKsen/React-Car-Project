@@ -16,6 +16,10 @@ import BMW from "./Pages/BMW/BMW";
 import BMWi7 from "./Pages/BMW/BMWI7";
 import BMWM8 from "./Pages/BMW/BMWM8";
 import BMWXM from "./Pages/BMW/BMWXM";
+import Mercedes from "./Pages/Mercedes/Mercedes";
+import MercedesCLE from "./Pages/Mercedes/MercedesCLE";
+import MercedesGLE from "./Pages/Mercedes/MercedesGLE";
+import MercedesMaybach from "./Pages/Mercedes/MercedesMaybach";
 import Summery from "./Pages/Summery/Summery";
 import Form from "./Composants/Form/Form";
 import Final from "./Pages/Final/Final";
@@ -41,6 +45,13 @@ function App() {
           <Route path="/BMW/BMWi7" element={<BMWi7 />} />
           <Route path="/BMW/BMWM8" element={<BMWM8 />} />
           <Route path="/BMW/BMWXM" element={<BMWXM />} />
+          <Route path="/Mercedes" element={<Mercedes />} />
+          <Route path="/Mercedes/MercedesCLE" element={<MercedesCLE />} />
+          <Route path="/Mercedes/MercedesGLE" element={<MercedesGLE />} />
+          <Route
+            path="/Mercedes/MercedesMaybach"
+            element={<MercedesMaybach />}
+          />
           <Route path="/summery" element={<Summery />} />
           <Route path="/form" element={<Form />} />
           <Route path="/final" element={<Final />} />
