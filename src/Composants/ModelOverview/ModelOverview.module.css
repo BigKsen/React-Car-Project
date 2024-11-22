@@ -1,97 +1,98 @@
 .mainModelOverview {
-    width: 100vw;
-    height: 75vh;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    align-items: center;
-    color: black;
-    font-family: "GothamOfficeRegular";
-    font-size: 1em;
-    line-height: 1.6;
+  width: 100vw;
+  height: 75vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  color: black;
+  font-family: "GothamOfficeRegular";
+  font-size: 1em;
+  line-height: 1.6;
 }
 .carImg {
-    margin-left: 5%;
-    width: 32%;
-    height: 80%;
-    position: relative; /* Permet de superposer les images */
+  margin-left: 5%;
+  width: 32%;
+  height: 80%;
+  position: relative; /* Permet de superposer les images */
 }
 
 .carImg > img {
-    width: 100%;
-    height: 100%;
-    position: absolute; /* Les images se superposent les unes sur les autres */
-    opacity: 0; /* Toutes les images sont invisibles par défaut */
-    transition: opacity 1s ease-in-out; /* Ajout d'une transition sur l'opacité */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute; /* Les images se superposent les unes sur les autres */
+  opacity: 0; /* Toutes les images sont invisibles par défaut */
+  transition: opacity 1s ease-in-out; /* Ajout d'une transition sur l'opacité */
 }
 
 .carImg > img.visible {
-    opacity: 1; /* L'image visible aura une opacité de 1 */
-    z-index: 1; /* L'image visible est au-dessus des autres */
+  opacity: 1; /* L'image visible aura une opacité de 1 */
+  z-index: 1; /* L'image visible est au-dessus des autres */
 }
 
 .carText {
-    margin-left: 8%;
-    width: 50%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: top;
-    align-items: left;
+  margin-left: 8%;
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: left;
 }
 
 .textTitels {
-    width: 100%;
-    margin-bottom: 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .textTitels h2:hover {
-    color: #b3911f;
+  color: #b3911f;
 }
 
 .textTitels h2 {
-    font-family: "GothamOfficeRegular";
-    cursor: pointer;
-    transition: color 0.3s ease;
+  font-family: "GothamOfficeRegular";
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .textTitels h2.selected {
-    color: #b3911f;
-    text-decoration: underline;
+  color: #b3911f;
+  text-decoration: underline;
 }
 
 .creationTab > p,
 .designTab > p,
 .technologyTab > p,
 .featuresTab > p {
-    width: 100%;
-    height: 80%;
+  width: 100%;
+  height: 80%;
 }
 
 .overviewconfigureButtonWrapper {
-    width: 100%;
-    display: flex;
-    margin-left: 17%;
-    margin-bottom: 5%;
+  width: 100%;
+  display: flex;
+  margin-left: 17%;
+  margin-bottom: 5%;
 }
 
 .overviewConfigureBtn {
-    padding: 12px 30px;
-    border: 2px solid #b3911f;
-    border-radius: 3px;
-    background: #ffffff;
-    color: #000000;
-    font-size: 1em;
-    text-transform: uppercase;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
-    cursor: pointer;
-    font-family: "GothamOfficeRegular";
+  padding: 12px 30px;
+  border: 2px solid #b3911f;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
 }
 
 .overviewConfigureBtn:hover {
-    background-color: #b3911f;
-    color: #ffffff;
+  background-color: #b3911f;
+  color: #ffffff;
 }
