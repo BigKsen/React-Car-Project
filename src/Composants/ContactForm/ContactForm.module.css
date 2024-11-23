@@ -1,0 +1,100 @@
+/* Conteneur principal du formulaire */
+.form-container {
+  text-align: center; /* Centre tout le contenu horizontalement */
+  margin: 0 auto; /* Centre horizontalement */
+}
+
+/* Centrer le titre */
+.form-container h2 {
+  text-align: center; /* Centre le texte */
+  margin-bottom: 15%; /* Espace sous le titre */
+  color: #b3911f;
+}
+
+/* Formulaire */
+form {
+  width: 100%;
+  max-width: 500px; /* Limite la largeur maximale du formulaire */
+  margin: 0 auto; /* Centre le formulaire horizontalement */
+  display: flex;
+  flex-direction: column; /* Dispose les éléments verticalement */
+  gap: 1rem; /* Espacement entre chaque champ */
+  align-items: center; /* Centre les champs */
+}
+
+/* Champs et labels */
+form div {
+  display: flex; /* Flexbox pour les labels et inputs */
+  gap: 1rem; /* Espacement entre le label et l'input */
+  width: 100%; /* S'étend sur toute la largeur */
+  justify-content: center; /* Centre les champs */
+}
+
+/* Style des labels */
+label {
+  width: 150px; /* Largeur uniforme des labels */
+  text-align: left; /* Alignement à gauche */
+  font-size: 1rem;
+}
+
+/* Styles des champs de saisie et du textarea */
+input,
+textarea {
+  width: 100%; /* S'adapte à la largeur disponible */
+  max-width: 300px; /* Limite une largeur maximale */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  background-color: rgb(220, 219, 219);
+}
+
+textarea {
+  height: 100px; /* Hauteur spécifique */
+  resize: none; /* Empêche le redimensionnement */
+}
+
+/* Conteneur du formulaire */
+.contactForm {
+  width: 40%;
+  height: 80%;
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  padding: 2%; /* Espace autour du formulaire */
+  border-left: 1px solid #b3911f;
+  box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+/* Boutons */
+form div:last-child {
+  display: flex; /* Flexbox pour aligner les boutons */
+  justify-content: space-between; /* Centre horizontalement */
+  gap: 1rem; /* Ajoute un espacement entre les boutons */
+}
+
+button {
+  padding: 8px 50px; /* Réduit la hauteur (8px en haut et en bas) et augmente la largeur (40px à gauche et à droite) */
+  border: 2px solid #b3911f;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1.1em; /* Augmente légèrement la taille de la police */
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  cursor: pointer;
+  margin-top: 10%;
+}
+
+button:hover {
+  background-color: #b3911f;
+  color: #ffffff;
+}
+
+button[type="submit"] {
+  border: px solid #b3911f;
+}
+
+button[type="button"] {
+  border: 1px solid #b3911f;
+}

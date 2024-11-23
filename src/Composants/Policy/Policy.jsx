@@ -1,8 +1,10 @@
 import style from "./Policy.module.css";
+import BackBtn from "../BackBtn/BackBtn";
 
 const Policy = () => {
   return (
     <>
+      <BackBtn />
       <div className={style.mainPolicy}>
         <h3>Privacy Policy for REGAL-RIDE APP</h3>
         <h4>Effective Date: 02/12/2024</h4>

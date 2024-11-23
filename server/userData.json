@@ -45,5 +45,15 @@
       "emailContact": "alain@gmail.com",
       "messageContact": "xv <vx<w"
     }
+  },
+  {
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "kseni",
+      "lastNameContact": "kozjanova",
+      "telephoneContact": "0487/511.766",
+      "emailContact": "k@hotmail.com",
+      "messageContact": "Check du samedi"
+    }
   }
 ]
