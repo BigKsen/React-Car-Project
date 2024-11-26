@@ -3,16 +3,48 @@
     padding: 0;
 }
 
-.mainConfigurator {
+.configuratorContainer {
     width: 100vw;
-    height: 75vh;
+    height: 70vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: center;
-    color: black;
-    font-family: "GothamOfficeRegular";
-    text-transform: uppercase;
-    font-size: 1.4em;
-    background-color: green;
+}
+
+h2 {
+    width: 100%;
+    height: 5%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.configuratorImg {
+    width: 65%;
+    height: 80%;
+}
+
+.carConfiguratorBtns {
+    width: 35%;
+    height: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15%;
+    margin-top: 5px;
+    margin-bottom: 5%;
+}
+
+.carConfiguratorBtns > button{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+}
+
+.carConfiguratorBtns > button[type="submit"] {
+    margin: 0;
+}
+
+.carConfiguratorBtns > button[type="button"] {
+    margin: 0;
 }

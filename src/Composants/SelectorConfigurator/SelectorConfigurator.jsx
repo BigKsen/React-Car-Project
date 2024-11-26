@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelected } from "../SelectedContext";
+import style from "./SelectorConfigurator.module.css"
 
 function SelectorConfigurator() {
   const {
@@ -76,11 +77,12 @@ function SelectorConfigurator() {
     : [];
 
   return (
-    <div>
-      <h1>Car Configurator</h1>
+    <div className={style.carConfiguratorMain}>
 
+
+    <div className={style.carConfigurator}>
       <label>
-        Brand:
+        Brand
         <select value={selectedBrand} onChange={handleBrandChange}>
           <option value="">Select a brand</option>
           {brandOptions.map((brand) => (
@@ -92,7 +94,7 @@ function SelectorConfigurator() {
       </label>
 
       <label>
-        Model:
+        Model
         <select
           value={selectedModel}
           onChange={handleModelChange}
@@ -107,7 +109,7 @@ function SelectorConfigurator() {
       </label>
 
       <label>
-        Exterior:
+        Exterior
         <select
           value={selectedExterior}
           onChange={(e) => setSelectedExterior(e.target.value)}
@@ -122,7 +124,7 @@ function SelectorConfigurator() {
       </label>
 
       <label>
-        Interior:
+        Interior
         <select
           value={selectedInterior}
           onChange={(e) => setSelectedInterior(e.target.value)}
@@ -137,7 +139,7 @@ function SelectorConfigurator() {
       </label>
 
       <label>
-        Wheels:
+        Wheels
         <select
           value={selectedWheels}
           onChange={(e) => setSelectedWheels(e.target.value)}
@@ -152,7 +154,7 @@ function SelectorConfigurator() {
       </label>
 
       <label>
-        Highlights:
+        Highlights
         <select
           value={selectedHighlights}
           onChange={(e) => setSelectedHighlights(e.target.value)}
@@ -165,6 +167,7 @@ function SelectorConfigurator() {
           ))}
         </select>
       </label>
+      </div>
     </div>
   );
 }

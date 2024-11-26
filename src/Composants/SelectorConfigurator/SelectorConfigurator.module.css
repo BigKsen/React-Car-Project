@@ -1,0 +1,38 @@
+.carConfiguratorMain {
+    width: 35%;
+    height: 75%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: top;
+    color: black;
+    font-family: "GothamOfficeRegular";
+    font-size: 1em;
+    overflow-y: scroll;
+}
+
+.carConfigurator {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    display: flex;
+    flex-direction: column; /* Organisation verticale des champs */
+    margin-left: 12%;
+}
+
+label {
+    font-size: 1rem;
+    background-color: transparent; /* Supprime le fond */
+    margin-top: 7%;
+}
+
+select {
+    width: 300px; /* Largeur fixe pour tous les sélecteurs */
+    padding: 0.5rem; /* Espacement interne pour rendre le sélecteur plus grand */
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: rgb(220, 219, 219);
+    font-family: "GothamOfficeRegular";
+    margin-top: 5%;
+}

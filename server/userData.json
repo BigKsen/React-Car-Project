@@ -55,5 +55,39 @@
       "emailContact": "k@hotmail.com",
       "messageContact": "Check du samedi"
     }
+  },
+  {
+    "title": " BOOKING Request",
+    "formData": {
+      "firstName": "",
+      "secondName": "",
+      "tel": "",
+      "email": ""
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "M8",
+      "selectedExterior": "White",
+      "selectedInterior": "Camel",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "HID Xenon"
+    }
+  },
+  {
+    "title": " BOOKING Request",
+    "formData": {
+      "firstName": "",
+      "secondName": "",
+      "tel": "",
+      "email": ""
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "M8",
+      "selectedExterior": "White",
+      "selectedInterior": "Camel",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "HID Xenon"
+    }
   }
 ]

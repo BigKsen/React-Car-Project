@@ -1,7 +1,6 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
 import style from "./BackBtn.module.css";
-import chevronBack from "../../assets/images/chevronBack.svg";
 
 const BackBtn = () => {
     const navigate = useNavigate();
