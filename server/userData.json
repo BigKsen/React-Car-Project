@@ -89,5 +89,22 @@
       "selectedWheels": "22\"",
       "selectedHighlights": "HID Xenon"
     }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "ksenia",
+      "secondName": "Ksenia",
+      "tel": "0487/51.76.6",
+      "email": "ksenia.kozjanova@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "M8",
+      "selectedExterior": "White",
+      "selectedInterior": "Sport",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "Matrix LED"
+    }
   }
 ]

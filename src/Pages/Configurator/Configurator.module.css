@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: center;
+
 }
 
 h2 {
@@ -20,8 +21,11 @@ h2 {
 }
 
 .configuratorImg {
-    width: 65%;
-    height: 80%;
+    width: 60%;
+    height: 80%;    
+
+    
+
 }
 
 .carConfiguratorBtns {

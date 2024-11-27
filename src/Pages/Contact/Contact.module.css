@@ -1,30 +1,28 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 
 .mainContact {
   width: 100vw;
-  height: 75vh;
+  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   font-family: "GothamOfficeRegular";
+  margin: 0;
 }
 
-table {
+.contactTable {
   border-spacing: 10px;
 }
 
 .visitCard {
   width: 40%;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 2%;
+  background-color: red;
 }
 
 .visitCard > img {
@@ -35,10 +33,17 @@ table {
 
 .contactForm {
   width: 40%;
-  height: 80%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  height: 100%;
   border-left: 1px solid #b3911f;
+  background-color: violet;
+}
+
+.ContactH2{
+  width: 100vw;
+  height: 5vh;
+  margin:0; 
+  margin-top: 2%;
+  padding: 0;
+  background-color: grey;
 }
 

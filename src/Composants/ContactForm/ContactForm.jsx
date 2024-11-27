@@ -66,76 +66,76 @@ const ContactForm = () => {
   };
 
   return (
-    <div className={style["form-container"]}>
-    
-      <h2>Contact Us:</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstNameContact">First Name</label>
-          <input
-            type="text"
-            id="firstNameContact"
-            name="firstNameContact"
-            value={firstNameContact}
-            onChange={(e) => setfirstNameContact(e.target.value)}
-            required
-          />
-        </div>
+    <>
+      <div className={style["form-container"]}>
+        <form onSubmit={handleSubmit} className={style.FormContactForm}>
+          <div>
+            <label htmlFor="firstNameContact">First Name</label>
+            <input
+              type="text"
+              id="firstNameContact"
+              name="firstNameContact"
+              value={firstNameContact}
+              onChange={(e) => setfirstNameContact(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="lastNameContact">Last Name</label>
-          <input
-            type="text"
-            id="lastNameContact"
-            name="lastNameContact"
-            value={lastNameContact}
-            onChange={(e) => setlastNameContact(e.target.value)}
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="lastNameContact">Last Name</label>
+            <input
+              type="text"
+              id="lastNameContact"
+              name="lastNameContact"
+              value={lastNameContact}
+              onChange={(e) => setlastNameContact(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="telephoneContact">Telephone</label>
-          <input
-            type="tel"
-            id="telephoneContact"
-            name="telephoneContact"
-            value={telephoneContact}
-            onChange={(e) => settelephoneContact(e.target.value)}
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="telephoneContact">Telephone</label>
+            <input
+              type="tel"
+              id="telephoneContact"
+              name="telephoneContact"
+              value={telephoneContact}
+              onChange={(e) => settelephoneContact(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="emailContact">Email</label>
-          <input
-            type="email"
-            id="emailContact"
-            name="emailContact"
-            value={emailContact}
-            onChange={(e) => setemailContact(e.target.value)}
-            required
-          />
-        </div>
+          <div>
+            <label htmlFor="emailContact">Email</label>
+            <input
+              type="email"
+              id="emailContact"
+              name="emailContact"
+              value={emailContact}
+              onChange={(e) => setemailContact(e.target.value)}
+              required
+            />
+          </div>
 
-        <div>
-          <label htmlFor="messageContact">Message</label>
-          <textarea
-            id="messageContact"
-            name="messageContact"
-            value={messageContact}
-            onChange={(e) => setmessageContact(e.target.value)}
-            required></textarea>
-        </div>
+          <div>
+            <label htmlFor="messageContact">Message</label>
+            <textarea
+              id="messageContact"
+              name="messageContact"
+              value={messageContact}
+              onChange={(e) => setmessageContact(e.target.value)}
+              required></textarea>
+          </div>
 
-        <div>
-          <button type="submit">SEND</button>
-          <button type="button" onClick={handleReset}>
-            RESET
-          </button>
-        </div>
-      </form>
-    </div>
+          <div>
+            <button type="submit">SEND</button>
+            <button type="button" onClick={handleReset}>
+              RESET
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

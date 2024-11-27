@@ -1,6 +1,7 @@
-import React, {useState} from "react";
-import {useNavigate} from "react-router-dom"; // Import du hook useNavigate
-import {useSelected} from "../../Composants/SelectedContext"; // Import du contexte
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import du hook useNavigate
+import { useSelected } from "../../Composants/SelectedContext"; // Import du contexte
+import style from "./Form.module.css"; // Import du fichier CSS pour le style
 
 const Form = () => {
     // Récupération des données depuis le contexte
@@ -24,66 +25,65 @@ const Form = () => {
     const navigate = useNavigate();
 
     // Le texte à afficher dans l'élément <h1>
-    const h1 = `Booking for ${selectedBrand || "Unknown Brand"} ${selectedModel || "Unknown Model"}`;
+    const h2 = `Booking for ${selectedBrand || "Unknown Brand"} ${selectedModel || "Unknown Model"}`;
 
     // Fonction pour gérer la soumission du formulaire
-  const handleSubmit = async (e) => {
-      e.preventDefault(); // Prevent page reload
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Prevent page reload
 
-      // Form data
-      const formData = {
-          firstName,
-          secondName,
-          tel,
-          email,
-      };
+        // Form data
+        const formData = {
+            firstName,
+            secondName,
+            tel,
+            email,
+        };
 
-      // Selected data
-      const selectedData = {
-          selectedBrand,
-          selectedModel,
-          selectedExterior,
-          selectedInterior,
-          selectedWheels,
-          selectedHighlights,
-      };
+        // Selected data
+        const selectedData = {
+            selectedBrand,
+            selectedModel,
+            selectedExterior,
+            selectedInterior,
+            selectedWheels,
+            selectedHighlights,
+        };
 
-      // Combine all data and wrap with a title
-      const dataToSend = {
-          title: " BOOKING Request", // Adding the title here
-          formData,
-          selectedData,
-      };
+        // Combine all data and wrap with a title
+        const dataToSend = {
+            title: "BOOKING Request", // Adding the title here
+            formData,
+            selectedData,
+        };
 
-      try {
-          // Send data to the backend
-          const response = await fetch("http://localhost:8000/users", {
-              method: "POST",
-              headers: {
-                  "Content-Type": "application/json",
-              },
-              body: JSON.stringify(dataToSend), // Send the wrapped data
-          });
+        try {
+            // Send data to the backend
+            const response = await fetch("http://localhost:8000/users", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(dataToSend), // Send the wrapped data
+            });
 
-          if (!response.ok) {
-              throw new Error("Failed to save data");
-          }
+            if (!response.ok) {
+                throw new Error("Failed to save data");
+            }
 
-          alert("Your data has been submitted successfully!");
+            alert("Your data has been submitted successfully!");
 
-          // Navigate to the FINAL page
-          navigate("/final", {
-              state: {
-                  formData,
-                  selectedData,
-              },
-          });
-      } catch (error) {
-          console.error("Error saving data:", error);
-          alert("Failed to save data.");
-      }
-  };
-
+            // Navigate to the FINAL page
+            navigate("/final", {
+                state: {
+                    formData,
+                    selectedData,
+                },
+            });
+        } catch (error) {
+            console.error("Error saving data:", error);
+            alert("Failed to save data.");
+        }
+    };
 
     // Fonction pour réinitialiser les champs du formulaire
     const handleReset = () => {
@@ -94,67 +94,88 @@ const Form = () => {
     };
 
     return (
-        <div>
-            <h1>{h1}</h1>
+        <>
+            <h2>{h2}</h2>
+        <div className={style.formContainer}>
 
-            {/* Affichage des informations sélectionnées */}
-            <div>
+            {/* Affichage des informations sélectionnées à gauche */}
+            <div className={style.selectedInfoContainer}>
                 <h3>Selected Information:</h3>
                 <ul>
-                    <li>
-                        <strong>Brand:</strong> {selectedBrand || "-"}
-                    </li>
-                    <li>
-                        <strong>Model:</strong> {selectedModel || "-"}
-                    </li>
-                    <li>
-                        <strong>Exterior:</strong> {selectedExterior || "-"}
-                    </li>
-                    <li>
-                        <strong>Interior:</strong> {selectedInterior || "-"}
-                    </li>
-                    <li>
-                        <strong>Wheels:</strong> {selectedWheels || "-"}
-                    </li>
-                    <li>
-                        <strong>Highlights:</strong> {selectedHighlights || "-"}
-                    </li>
+                    <li><strong>Brand</strong> {selectedBrand || "-"}</li>
+                    <li><strong>Model</strong> {selectedModel || "-"}</li>
+                    <li><strong>Exterior</strong> {selectedExterior || "-"}</li>
+                    <li><strong>Interior</strong> {selectedInterior || "-"}</li>
+                    <li><strong>Wheels</strong> {selectedWheels || "-"}</li>
+                    <li><strong>Highlights</strong> {selectedHighlights || "-"}</li>
                 </ul>
+
+                {/* Affichage des détails du modèle */}
+                <div className={style.modelDetailsContainer}>                    <h3>Model Details:</h3>
+                    {modelData ? (
+                        <table className={style.detailsTable}>
+                            <tbody>
+                                {Object.entries(modelData).map(([key, value]) => (
+                                    <tr key={key}>
+                                        <td><strong>{key}:</strong></td>
+                                        <td>{value || "-"}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    ) : (
+                        <p>No model details available</p>
+                    )}
+                </div>
             </div>
 
-            {/* Formulaire */}
-            <form onSubmit={handleSubmit}>
+            <div className={style.personalDataContainer}>
                 <h3>Personal Data:</h3>
-                <label htmlFor="firstName">First Name</label>
-                <input
-                    type="text"
-                    id="firstName"
-                    name="firstname"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                />
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="firstName">First Name</label>
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstname"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
+                    />
 
-                <label htmlFor="secondName">Second Name</label>
-                <input
-                    type="text"
-                    id="secondName"
-                    name="secondName"
-                    value={secondName}
-                    onChange={(e) => setSecondName(e.target.value)}
-                />
+                    <label htmlFor="secondName">Second Name</label>
+                    <input
+                        type="text"
+                        id="secondName"
+                        name="secondName"
+                        value={secondName}
+                        onChange={(e) => setSecondName(e.target.value)}
+                    />
 
-                <label htmlFor="tel">Telephone</label>
-                <input type="tel" id="tel" name="tel" value={tel} onChange={(e) => setTel(e.target.value)} />
+                    <label htmlFor="tel">Telephone</label>
+                    <input
+                        type="tel"
+                        id="tel"
+                        name="tel"
+                        value={tel}
+                        onChange={(e) => setTel(e.target.value)}
+                    />
 
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
 
-                <button type="submit">CONFIRM</button>
-                <button type="button" onClick={handleReset}>
-                    RESET
-                </button>
-            </form>
+                    <div className={style.bookingFormBtns}>
+                    <button type="submit">CONFIRM</button>
+                    <button type="button" onClick={handleReset}>RESET</button>
+                    </div>
+                </form>
+            </div>
         </div>
+        </>
     );
 };
 

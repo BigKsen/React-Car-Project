@@ -5,10 +5,12 @@ import Saloon from "../../assets/images/saloon.avif";
 const Contact = () => {
   return (
     <>
+      <h2 className={style.ContactH2}>Contact Us:</h2>
+
       <div className={style.mainContact}>
         <div className={style.visitCard}>
           <img src={Saloon} alt="dealers saloon" />
-          <table>
+          <table className={style.contactTable}>
             <tr>
               <td>Address</td>
               <td>avenue Molière 320</td>

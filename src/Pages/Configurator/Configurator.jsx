@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
-import {useNavigate} from "react-router-dom";
-import {useSelected} from "../../Composants/SelectedContext";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelected } from "../../Composants/SelectedContext";
 import SelectorConfigurator from "../../Composants/SelectorConfigurator/SelectorConfigurator";
 import style from "./Configurator.module.css";
 import CLEBlack from "../../assets/images/Mercedes/CLE/Ready/Resized/CLEBlack.avif";
@@ -23,185 +23,195 @@ import Q7Red from "../../assets/images/Audi/Q7/Ready/Resized/AudiQ7Red.avif";
 import RSBlack from "../../assets/images/Audi/RS/Ready/Resized/AudiRSBlack.avif";
 import RSGreen from "../../assets/images/Audi/RS/Ready/Resized/AudiRSGreen.avif";
 import RSWhite from "../../assets/images/Audi/RS/Ready/Resized/AudiRSWhite.avif";
-import i7Blue from  "../../assets/images/BMW/I7/Ready/Resized/BMWi7BlueCameleon.avif";
-import i7Red from "../../assets/images/BMW/I7/Ready/Resized/BMW i7Red.avif"
+import i7Blue from "../../assets/images/BMW/I7/Ready/Resized/BMWi7BlueCameleon.avif";
+import i7Red from "../../assets/images/BMW/I7/Ready/Resized/BMW i7Red.avif";
 import i7Grey from "../../assets/images/BMW/I7/Ready/Resized/BMW i7Grey.avif";
 import M8Blue from "../../assets/images/BMW/M8/Ready/Resized/BMWM8BlueNight.avif";
-import M8White from  "../../assets/images/BMW/M8/Ready/Resized/BMWM8White.avif";
+import M8White from "../../assets/images/BMW/M8/Ready/Resized/BMWM8White.avif";
 import M8Gold from "../../assets/images/BMW/M8/Ready/Resized/BMWM8Gold.avif";
 import XMBlack from "../../assets/images/BMW/XM/Ready/Resized/BMWXMBlack.avif";
 import XMWhite from "../../assets/images/BMW/XM/Ready/Resized/BMWXMWhite.avif";
 import XMRed from "../../assets/images/BMW/XM/Ready/Resized/BMWXMRed.avif";
 import DefaultImage from "../../assets/colorPalettes/Palette.avif";
 
-
-
-
 const Configurator = () => {
-    const navigate = useNavigate();
-    const {
-        selectedBrand,
-        selectedModel,
-        selectedExterior,
-        selectedInterior,
-        selectedWheels,
-        selectedHighlights,
-        setModelData,
-        resetAll,
-    } = useSelected();
+  const navigate = useNavigate();
+  const {
+    setCurrentImage, // Récupération du setter pour l'image
+    selectedBrand,
+    selectedModel,
+    selectedExterior,
+    selectedInterior,
+    selectedWheels,
+    selectedHighlights,
+    setModelData,
+    resetAll,
+  } = useSelected();
 
-    // Mapping des images en fonction du modèle et de l'extérieur
-    const modelExteriorImages = {
-        CLE: {
-            Black: CLEBlack,
-            Grey: CLEGrey,
-            Red: CLERed,
-        },
-        GLE: {
-            Black: GLEBlack,
-            White: GLEWhite,
-            Red: GLERed,
-            Gold: GLEGold,
-        },
-        Maybach: {
-            Black: MaybachBlack,
-            Red: MaybachRed,
-            Gold: MaybachGold,
-            GreenWater: MaybachGreenWater,
-        },
+  // Mapping des images en fonction du modèle et de l'extérieur
+  const modelExteriorImages = {
+    CLE: {
+      Black: CLEBlack,
+      Grey: CLEGrey,
+      Red: CLERed,
+    },
+    GLE: {
+      Black: GLEBlack,
+      White: GLEWhite,
+      Red: GLERed,
+      Gold: GLEGold,
+    },
+    Maybach: {
+      Black: MaybachBlack,
+      Red: MaybachRed,
+      Gold: MaybachGold,
+      "Green Water": MaybachGreenWater,
+    },
 
-        A8: {
-            Black: A8Black,
-            Blue: A8Blue,
-            LightGrey: A8LightGrey,
-            DarkGrey: A8DarkGrey,
-        },
+    A8: {
+      Black: A8Black,
+      Blue: A8Blue,
+      "Light Grey": A8LightGrey,
+      "Dark Grey": A8DarkGrey,
+    },
 
-        Q7: {
-            Black: Q7Black,
-            Red: Q7Red,
-        },
+    Q7: {
+      Black: Q7Black,
+      Red: Q7Red,
+    },
 
-        RS: {
-            Black: RSBlack,
-            Green: RSGreen,
-            White: RSWhite,
-        },
-        i7: {
-            Blue: i7Blue,
-            Red: i7Red,
-            Grey: i7Grey,
-        },
-        M8: {
-            Blue: M8Blue,
-            White: M8White,
-            Gold: M8Gold,
-        },
-        XM: {
-            Black: XMBlack,
-            White: XMWhite,
-            Red: XMRed,
-        },
-    };
+    RS: {
+      Black: RSBlack,
+      Green: RSGreen,
+      White: RSWhite,
+    },
+    i7: {
+      Blue: i7Blue,
+      Red: i7Red,
+      Grey: i7Grey,
+    },
+    M8: {
+      Blue: M8Blue,
+      White: M8White,
+      Gold: M8Gold,
+    },
+    XM: {
+      Black: XMBlack,
+      White: XMWhite,
+      Red: XMRed,
+    },
+  };
 
-    // Récupère l'image actuelle en fonction du modèle et de l'extérieur
-    const currentImage =
-        (modelExteriorImages[selectedModel] && modelExteriorImages[selectedModel][selectedExterior]) ||
-        DefaultImage; // Image par défaut si aucun extérieur sélectionné
+  // Récupère l'image actuelle en fonction du modèle et de l'extérieur
+  const currentImage =
+    (modelExteriorImages[selectedModel] &&
+      modelExteriorImages[selectedModel][selectedExterior]) ||
+    DefaultImage; // Image par défaut si aucun extérieur sélectionné
+
+  // Synchroniser l'image dans le contexte dès que selectedModel ou selectedExterior change
+  useEffect(() => {
+    setCurrentImage(currentImage); // Met à jour l'image dans le contexte global
+  }, [currentImage, setCurrentImage]); // Dépendances
 
     const fetchModelData = async () => {
-        try {
-            const response = await fetch("http://localhost:8000/options");
-            if (!response.ok) {
-                throw new Error("Failed to fetch data");
-            }
+    try {
+      const response = await fetch("http://localhost:8000/options");
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
 
-            const data = await response.json();
-            const filteredData = data[selectedModel];
+      const data = await response.json();
+      const filteredData = data[selectedModel];
 
-            if (!filteredData) {
-                throw new Error(`No data found for model: ${selectedModel}`);
-            }
+      if (!filteredData) {
+        throw new Error(`No data found for model: ${selectedModel}`);
+      }
 
-            const relevantFields = {
-                Brand: filteredData.make || "-",
-                Model: filteredData.model || "-",
-                Year: filteredData.year || "-",
-                Class: filteredData.vclass || "-",
-                Engine: filteredData.eng_dscr || "-",
-                EMotor: filteredData.evmotor || "-",
-                Cylinders: filteredData.cylinders || "-",
-                Fuel: filteredData.fueltype1 || "-",
-                Transmission: filteredData.trany || "-",
-                Drive: filteredData.drive || "-",
-                ATVtype: filteredData.atvtype || "-",
-            };
+      const relevantFields = {
+        Brand: filteredData.make || "-",
+        Model: filteredData.model || "-",
+        Year: filteredData.year || "-",
+        Class: filteredData.vclass || "-",
+        Engine: filteredData.eng_dscr || "-",
+        EMotor: filteredData.evmotor || "-",
+        Cylinders: filteredData.cylinders || "-",
+        Fuel: filteredData.fueltype1 || "-",
+        Transmission: filteredData.trany || "-",
+        Drive: filteredData.drive || "-",
+        ATVtype: filteredData.atvtype || "-",
+      };
 
-            setModelData(relevantFields);
-        } catch (err) {
-            console.error("Error fetching model data:", err);
-        }
-    };
+      setModelData(relevantFields);
+    } catch (err) {
+      console.error("Error fetching model data:", err);
+    }
+  };
 
-    useEffect(() => {
-        if (
-            selectedBrand &&
-            selectedModel &&
-            selectedExterior &&
-            selectedInterior &&
-            selectedWheels &&
-            selectedHighlights
-        ) {
-            fetchModelData();
-        }
-    }, [selectedBrand, selectedModel, selectedExterior, selectedInterior, selectedWheels, selectedHighlights]);
+  useEffect(() => {
+    if (
+      selectedBrand &&
+      selectedModel &&
+      selectedExterior &&
+      selectedInterior &&
+      selectedWheels &&
+      selectedHighlights
+    ) {
+      fetchModelData();
+    }
+  }, [
+    selectedBrand,
+    selectedModel,
+    selectedExterior,
+    selectedInterior,
+    selectedWheels,
+    selectedHighlights,
+  ]);
 
-    const handleSave = () => {
-        if (
-            selectedBrand &&
-            selectedModel &&
-            selectedExterior &&
-            selectedInterior &&
-            selectedWheels &&
-            selectedHighlights
-        ) {
-            navigate("/summery");
-        } else {
-            alert("Please complete all selections before saving!");
-        }
-    };
+  const handleSave = () => {
+    if (
+      selectedBrand &&
+      selectedModel &&
+      selectedExterior &&
+      selectedInterior &&
+      selectedWheels &&
+      selectedHighlights
+    ) {
+      navigate("/summery");
+    } else {
+      alert("Please complete all selections before saving!");
+    }
+  };
 
-    const handleReset = () => {
-        resetAll();
-    };
+  const handleReset = () => {
+    resetAll();
+  };
 
-    return (
-        <div className={style.configuratorContainer}>
-            <h2>Car Configurator</h2>
+  return (
+    <div className={style.configuratorContainer}>
+      <h2>Car Configurator</h2>
 
-            {/* Image dynamique en fonction du modèle et de l'extérieur */}
-            <div
-                className={style.configuratorImg}
-                style={{
-                    backgroundImage: `url(${currentImage})`,
-                    backgroundSize: "contain",
-                    backgroundRepeat:"no-repeat",
-                    backgroundPosition: "center",
-                }}
-            ></div>
+      {/* Image dynamique en fonction du modèle et de l'extérieur */}
+      <div
+        className={style.configuratorImg}
+        style={{
+          backgroundImage: `url(${currentImage})`,
+          backgroundSize: "80%",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+        }}></div>
 
-            <SelectorConfigurator />
+      <SelectorConfigurator />
 
-            <div className={style.carConfiguratorBtns}>
-                <button type="submit" onClick={handleSave}>
-                    Save
-                </button>
-                <button type="button" onClick={handleReset}>
-                    Reset
-                </button>
-            </div>
-        </div>
-    );
+      <div className={style.carConfiguratorBtns}>
+        <button type="submit" onClick={handleSave}>
+          Save
+        </button>
+        <button type="button" onClick={handleReset}>
+          Reset
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default Configurator;
