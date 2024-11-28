@@ -4,10 +4,15 @@
 }
 
 .mainPolicy {
-  width: 95vwvw;
+  width: 100vw;
   height: 70vh;
+  display: flex;
+}
+
+.mainPolicyText {
+  width: 70%;
   padding: 3%;
-  overflow: scroll;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -15,7 +20,31 @@
   color: black;
   font-family: "GothamOfficeRegular";
   font-size: 1.2em;
+  margin-left: 3%;
 }
+
+.mainPolicyText::-webkit-scrollbar {
+  width: 6px; /* Largeur verticale de la scrollbar */
+}
+
+
+/* Style de la piste */
+.selector::-webkit-scrollbar-track {
+  background: transparent; /* Fond de la piste */
+}
+
+/* Style de la barre */
+.mainPolicyText::-webkit-scrollbar-thumb {
+  background: #888; /* Couleur de la barre */
+  border-radius: 4px; /* Coins arrondis pour un style discret */
+}
+
+/* Couleur au survol */
+.mainPolicyText::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Couleur plus sombre au survol */
+}
+
+
 
 h3 {
   margin-left: 40%;

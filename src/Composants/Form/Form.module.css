@@ -122,23 +122,55 @@ h2 {
 .bookingFormBtns {
   width: 100%;
   height: 20%;
+  gap:15%;
   display: flex;
-  justify-content: space-evenly; /* Espacement égal entre les boutons */
+  justify-content: center; /* Espacement égal entre les boutons */
+  align-items: center;
+  
 }
 
-.bookingFormBtns > button {
-  width: 35%; /* Taille fixe pour chaque bouton */
-  height: 50%;
-  padding: 10px;
+.bookingFormBtns .bookingFormConfirm{
+  width: 150px;
+  height: 45px;
+  margin-top: 3%;
+  border: 1px solid #b3911f;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-.bookingFormBtns > button:hover {
-  background-color: #B3911F;
+.bookingFormBtns .bookingFormConfirm:hover{
+  background-color: #b3911f;
+  color: #ffffff;
 }
 
+.bookingFormBtns .bookingFormReset{
+  margin-top: 3%;
+  width: 150px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color:#ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
+}
 
-
-
+.bookingFormBtns .bookingFormReset:hover{
+  background-color: rgb(240, 240, 240);
+}
 
 
 

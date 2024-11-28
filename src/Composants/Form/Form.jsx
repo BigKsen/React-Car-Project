@@ -206,10 +206,10 @@ const Form = () => {
             </div>
 
             <div className={style.bookingFormBtns}>
-              <button type="submit">
+              <button className={style.bookingFormConfirm} type="submit">
                 CONFIRM
               </button>
-              <button type="button" onClick={handleReset}>
+              <button className={style.bookingFormReset} type="button" onClick={handleReset}>
                 RESET
               </button>
             </div>

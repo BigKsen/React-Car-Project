@@ -327,5 +327,110 @@
       "selectedWheels": "22\"",
       "selectedHighlights": "Laser"
     }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "fgjd",
+      "secondName": "dgj",
+      "tel": "fj",
+      "email": "ksenia.kozjanova@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "XM",
+      "selectedExterior": "Red",
+      "selectedInterior": "Orange",
+      "selectedWheels": "20\"",
+      "selectedHighlights": "Matrix LED"
+    }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "ksenia",
+      "secondName": "Ksenia",
+      "tel": "0487/51.76.66",
+      "email": "ksenia.kozjanova@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "XM",
+      "selectedExterior": "Red",
+      "selectedInterior": "Orange",
+      "selectedWheels": "20\"",
+      "selectedHighlights": "Matrix LED"
+    }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "Martine",
+      "secondName": "nlù",
+      "tel": "0487/51.76.66",
+      "email": "dypont@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "Mercedes-Benz",
+      "selectedModel": "GLE",
+      "selectedExterior": "Red",
+      "selectedInterior": "Camel",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "LED"
+    }
+  },
+  {
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "ksenia",
+      "lastNameContact": "kozjanova",
+      "telephoneContact": "0487/511.766",
+      "emailContact": "k@hotmail.com",
+      "messageContact": "olala"
+    }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "Martine",
+      "secondName": "Ksenia",
+      "tel": "0487/51.76.6",
+      "email": "dypont@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "BMW",
+      "selectedModel": "M8",
+      "selectedExterior": "White",
+      "selectedInterior": "Camel",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "Laser"
+    }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "ksenia",
+      "secondName": "nlù",
+      "tel": "0487/51.76.66",
+      "email": "dypont@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "Audi",
+      "selectedModel": "Q7",
+      "selectedExterior": "Black",
+      "selectedInterior": "Black",
+      "selectedWheels": "21\"",
+      "selectedHighlights": "LED"
+    }
+  },
+  {
+    "title": "CONTACT Request",
+    "formData": {
+      "firstNameContact": "ksenia",
+      "lastNameContact": "kozjanova",
+      "telephoneContact": "0487/511.766",
+      "emailContact": "k@hotmail.com",
+      "messageContact": "sdbvqsdvg"
+    }
   }
 ]

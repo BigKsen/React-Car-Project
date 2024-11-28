@@ -34,16 +34,39 @@
   margin-bottom: 10%;
 }
 
-.carConfiguratorBtns > button {
-  width: 25%;
-  display: flex;
-  justify-content: center;
+.carConfiguratorBtns .submitBtn {
+  margin-top: 3%;
+  padding: 10px 40px;
+  border: 2px solid #b3911f;
+  border-radius: 3px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
 }
 
-.carConfiguratorBtns > button[type="submit"] {
-  margin: 0;
+.carConfiguratorBtns .submitBtn:hover {
+  background-color: #b3911f;
+  color: #ffffff;
 }
 
-.carConfiguratorBtns > button[type="button"] {
-  margin: 0;
+.carConfiguratorBtns .resetBtn {
+  margin-top: 3%;
+  padding: 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: white;
+   color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
+}
+
+.carConfiguratorBtns .resetBtn:hover {
+  background-color: rgb(240, 240, 240);
 }

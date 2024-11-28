@@ -69,7 +69,7 @@ const ContactForm = () => {
     <>
       <div className={style["form-container"]}>
         <form onSubmit={handleSubmit} className={style.FormContactForm}>
-          <div>
+          <div className={style.contactFormRow}>
             <label htmlFor="firstNameContact">First Name</label>
             <input
               type="text"
@@ -81,7 +81,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div>
+          <div className={style.contactFormRow}>
             <label htmlFor="lastNameContact">Last Name</label>
             <input
               type="text"
@@ -93,7 +93,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div>
+          <div className={style.contactFormRow}>
             <label htmlFor="telephoneContact">Telephone</label>
             <input
               type="tel"
@@ -105,7 +105,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div>
+          <div className={style.contactFormRow}>
             <label htmlFor="emailContact">Email</label>
             <input
               type="email"
@@ -117,7 +117,7 @@ const ContactForm = () => {
             />
           </div>
 
-          <div>
+          <div className={style.contactFormRow}>
             <label htmlFor="messageContact">Message</label>
             <textarea
               id="messageContact"
@@ -127,9 +127,9 @@ const ContactForm = () => {
               required></textarea>
           </div>
 
-          <div>
-            <button type="submit">SEND</button>
-            <button type="button" onClick={handleReset}>
+          <div className={style.contactFormBtns}>
+            <button className={style.contactFormSend}  type="submit">SEND</button>
+            <button className={style.contactFormReset}type="button" onClick={handleReset}>
               RESET
             </button>
           </div>

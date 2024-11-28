@@ -22,7 +22,6 @@
   justify-content: center;
   align-items: center;
   gap: 2%;
-  background-color: red;
 }
 
 .visitCard > img {
@@ -34,8 +33,11 @@
 .contactForm {
   width: 40%;
   height: 100%;
-  border-left: 1px solid #b3911f;
-  background-color: violet;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .ContactH2{
@@ -44,6 +46,5 @@
   margin:0; 
   margin-top: 2%;
   padding: 0;
-  background-color: grey;
 }
 

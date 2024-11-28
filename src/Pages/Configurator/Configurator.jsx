@@ -204,10 +204,10 @@ const Configurator = () => {
       <SelectorConfigurator />
 
       <div className={style.carConfiguratorBtns}>
-        <button type="submit" onClick={handleSave}>
+        <button className={style.submitBtn} type="submit" onClick={handleSave}>
           Save
         </button>
-        <button type="button" onClick={handleReset}>
+        <button className={style.resetBtn} type="button" onClick={handleReset}>
           Reset
         </button>
       </div>

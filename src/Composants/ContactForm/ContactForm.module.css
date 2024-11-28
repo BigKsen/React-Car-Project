@@ -2,94 +2,99 @@
 .form-container {
   text-align: center; /* Centre tout le contenu horizontalement */
   margin: 0 auto; /* Centre horizontalement */
-  background-color: green;
   width: 100%;
   height: 100%;
-}
-
-/* Centrer le titre */
-.form-container h2 {
-  text-align: center; /* Centre le texte */
-  margin-bottom: 15%; /* Espace sous le titre */
-  color: #b3911f;
-}
-
-/* Formulaire */
-
-
-/* Champs et labels */
-.FormContactForm >div {
-  display: flex; /* Flexbox pour les labels et inputs */
-  gap: 1rem; /* Espacement entre le label et l'input */
-  width: 100%; /* S'étend sur toute la largeur */
-  justify-content: center; /* Centre les champs */
-}
-
-/* Style des labels */
-.FormContactForm >label {
-  width: 150px; /* Largeur uniforme des labels */
-  text-align: left; /* Alignement à gauche */
-  font-size: 1rem;
-}
-
-/* Styles des champs de saisie et du textarea */
-.FormContactForm >input,.FormContactForm >textarea {
-  width: 100%; /* S'adapte à la largeur disponible */
-  max-width: 300px; /* Limite une largeur maximale */
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  box-sizing: border-box;
-  background-color: rgb(220, 219, 219);
-}
-
-.FormContactForm >textarea {
-  height: 100px; /* Hauteur spécifique */
-  resize: none; /* Empêche le redimensionnement */
+  border-left: 1px solid #b3911f;
 }
 
 /* Conteneur du formulaire */
 .FormContactForm {
   width: 100%;
   height: 100%;
+  font-family: "GothamOfficeRegular";
   display: flex;
-  justify-content: center; /* Centre horizontalement */
-  align-items: center; /* Centre verticalement */
-  padding: 2%; /* Espace autour du formulaire */
-  border-left: 1px solid #b3911f;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10%;
+  gap: 30px; /* Ajout d'espacement entre chaque ligne du formulaire */
+}
+
+.contactFormRow {
+  display: flex;
+  align-items: center; /* Alignement vertical */
+  justify-content: space-between; /* Équilibre l'espace entre label et input */
+  width: 70%; /* S'adapte au conteneur parent */
+}
+
+.contactFormRow label {
+  flex: 0 0 20%; /* Les labels occupent 30% de la largeur */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-right: 10px; /* Espace entre le label et l'input */
+}
+
+.contactFormRow input,
+.contactFormRow textarea {
+  flex: 1; /* Les inputs occupent tout l'espace restant */
+  outline: none;
+  transition: border-color 0.3s ease;
+  padding: 0.5rem; /* Espacement interne pour le select */
+  border: 1px solid #ccc; /* Bordure */
+  border-radius: 4px; /* Coins arrondis pour un design moderne */
+  font-family: "GothamOfficeRegular";
+  background-color: rgb(240, 240, 240); /* Couleur de fond plus douce */
   box-sizing: border-box; /* Inclut le padding dans la largeur totale */
-  background-color: yellow;
 }
 
-/* Boutons */
-form div:last-child {
-  display: flex; /* Flexbox pour aligner les boutons */
-  justify-content: space-between; /* Centre horizontalement */
-  gap: 1rem; /* Ajoute un espacement entre les boutons */
+.contactFormRow input:focus {
+  border-color: #b3911f; /* Mettre en valeur le champ au focus */
 }
 
-button {
-  padding: 8px 50px; /* Réduit la hauteur (8px en haut et en bas) et augmente la largeur (40px à gauche et à droite) */
-  border: 2px solid #b3911f;
+.contactFormBtns {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contactFormBtns .contactFormSend {
+  width: 150px;
+  height: 45px;
+  margin-top: 3%;
   border-radius: 3px;
   background: #ffffff;
   color: #000000;
-  font-size: 1.1em; /* Augmente légèrement la taille de la police */
+  font-size: 1em;
   text-transform: uppercase;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
   cursor: pointer;
-  margin-top: 10%;
+  font-family: "GothamOfficeRegular";
+  display: flex;
+  border: 1px solid #b3911f;
+  justify-content: center;
+  align-items: center;
 }
-
-button:hover {
+.contactFormBtns .contactFormSend:hover {
   background-color: #b3911f;
   color: #ffffff;
 }
-
-button[type="submit"] {
-  border: px solid #b3911f;
+.contactFormBtns .contactFormReset {
+  margin-top: 3%;
+  width: 150px;
+  height: 45px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 1em;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease; /* Transition allongée */
+  cursor: pointer;
+  font-family: "GothamOfficeRegular";
 }
-
-button[type="button"] {
-  border: 1px solid #b3911f;
+.contactFormBtns .contactFormReset:hover {
+  background-color: rgb(240, 240, 240);
 }

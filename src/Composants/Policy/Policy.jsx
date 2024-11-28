@@ -3,9 +3,9 @@ import BackBtn from "../BackBtn/BackBtn";
 
 const Policy = () => {
   return (
-    <>
+    <div className={style.mainPolicy}>
       <BackBtn />
-      <div className={style.mainPolicy}>
+      <div className={style.mainPolicyText}>
         <h3>Privacy Policy for REGAL-RIDE APP</h3>
         <h4>Effective Date: 02/12/2024</h4>
         <p>
@@ -91,7 +91,7 @@ const Policy = () => {
           depending on your user base and location.
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
