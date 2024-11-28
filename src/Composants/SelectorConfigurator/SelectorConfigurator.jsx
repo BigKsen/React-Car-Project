@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelected } from "../SelectedContext";
-import style from "./SelectorConfigurator.module.css"
+import style from "./SelectorConfigurator.module.css";
 
 function SelectorConfigurator() {
   const {
@@ -78,95 +78,98 @@ function SelectorConfigurator() {
 
   return (
     <div className={style.carConfiguratorMain}>
+      <div className={style.carConfigurator}>
+        <div className={style.formRow}>
+          <label htmlFor="brand">Brand</label>
+          <select id="brand" value={selectedBrand} onChange={handleBrandChange}>
+            <option value="">Select a brand</option>
+            {brandOptions.map((brand) => (
+              <option key={brand} value={brand}>
+                {brand}
+              </option>
+            ))}
+          </select>
+        </div>
 
+        <div className={style.formRow}>
+          <label htmlFor="model">Model</label>
+          <select
+            id="model"
+            value={selectedModel}
+            onChange={handleModelChange}
+            disabled={!selectedBrand}>
+            <option value="">Select a model</option>
+            {currentModelOptions.map((model) => (
+              <option key={model} value={model}>
+                {model}
+              </option>
+            ))}
+          </select>
+        </div>
 
-    <div className={style.carConfigurator}>
-      <label>
-        Brand
-        <select value={selectedBrand} onChange={handleBrandChange}>
-          <option value="">Select a brand</option>
-          {brandOptions.map((brand) => (
-            <option key={brand} value={brand}>
-              {brand}
-            </option>
-          ))}
-        </select>
-      </label>
+        <div className={style.formRow}>
+          <label htmlFor="exterior">Exterior</label>
+          <select
+            id="exterior"
+            value={selectedExterior}
+            onChange={(e) => setSelectedExterior(e.target.value)}
+            disabled={!selectedModel}>
+            <option value="">Select an exterior</option>
+            {currentExteriorOptions.map((exterior) => (
+              <option key={exterior} value={exterior}>
+                {exterior}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <label>
-        Model
-        <select
-          value={selectedModel}
-          onChange={handleModelChange}
-          disabled={!selectedBrand}>
-          <option value="">Select a model</option>
-          {currentModelOptions.map((model) => (
-            <option key={model} value={model}>
-              {model}
-            </option>
-          ))}
-        </select>
-      </label>
+        <div className={style.formRow}>
+          <label htmlFor="interior">Interior</label>
+          <select
+            id="interior"
+            value={selectedInterior}
+            onChange={(e) => setSelectedInterior(e.target.value)}
+            disabled={!selectedModel}>
+            <option value="">Select an interior</option>
+            {currentInteriorOptions.map((interior) => (
+              <option key={interior} value={interior}>
+                {interior}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <label>
-        Exterior
-        <select
-          value={selectedExterior}
-          onChange={(e) => setSelectedExterior(e.target.value)}
-          disabled={!selectedModel}>
-          <option value="">Select an exterior</option>
-          {currentExteriorOptions.map((exterior) => (
-            <option key={exterior} value={exterior}>
-              {exterior}
-            </option>
-          ))}
-        </select>
-      </label>
+        <div className={style.formRow}>
+          <label htmlFor="wheels">Wheels</label>
+          <select
+            id="wheels"
+            value={selectedWheels}
+            onChange={(e) => setSelectedWheels(e.target.value)}
+            disabled={!selectedModel}>
+            <option value="">Select wheel size</option>
+            {wheelOptions.map((wheel) => (
+              <option key={wheel} value={wheel}>
+                {wheel}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      <label>
-        Interior
-        <select
-          value={selectedInterior}
-          onChange={(e) => setSelectedInterior(e.target.value)}
-          disabled={!selectedModel}>
-          <option value="">Select an interior</option>
-          {currentInteriorOptions.map((interior) => (
-            <option key={interior} value={interior}>
-              {interior}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      <label>
-        Wheels
-        <select
-          value={selectedWheels}
-          onChange={(e) => setSelectedWheels(e.target.value)}
-          disabled={!selectedModel}>
-          <option value="">Select wheel size</option>
-          {wheelOptions.map((wheel) => (
-            <option key={wheel} value={wheel}>
-              {wheel}
-            </option>
-          ))}
-        </select>
-      </label>
-
-      <label>
-        Highlights
-        <select
-          value={selectedHighlights}
-          onChange={(e) => setSelectedHighlights(e.target.value)}
-          disabled={!selectedModel}>
-          <option value="">Select headlight type</option>
-          {highlightOptions.map((highlight) => (
-            <option key={highlight} value={highlight}>
-              {highlight}
-            </option>
-          ))}
-        </select>
-      </label>
+        <div className={style.formRow}>
+          <label htmlFor="highlights">Highlights</label>
+          <select
+            id="highlights"
+            value={selectedHighlights}
+            onChange={(e) => setSelectedHighlights(e.target.value)}
+            disabled={!selectedModel}>
+            <option value="">Select headlight type</option>
+            {highlightOptions.map((highlight) => (
+              <option key={highlight} value={highlight}>
+                {highlight}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
     </div>
   );

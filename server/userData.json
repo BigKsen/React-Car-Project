@@ -106,5 +106,22 @@
       "selectedWheels": "22\"",
       "selectedHighlights": "Matrix LED"
     }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "",
+      "secondName": "",
+      "tel": "",
+      "email": ""
+    },
+    "selectedData": {
+      "selectedBrand": "Audi",
+      "selectedModel": "Q7",
+      "selectedExterior": "Black",
+      "selectedInterior": "Camel",
+      "selectedWheels": "21\"",
+      "selectedHighlights": "HID Xenon"
+    }
   }
 ]

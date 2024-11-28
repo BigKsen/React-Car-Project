@@ -32,7 +32,7 @@ import M8Gold from "../../assets/images/BMW/M8/Ready/Resized/BMWM8Gold.avif";
 import XMBlack from "../../assets/images/BMW/XM/Ready/Resized/BMWXMBlack.avif";
 import XMWhite from "../../assets/images/BMW/XM/Ready/Resized/BMWXMWhite.avif";
 import XMRed from "../../assets/images/BMW/XM/Ready/Resized/BMWXMRed.avif";
-import DefaultImage from "../../assets/colorPalettes/Palette.avif";
+import DefaultImage from "../../assets/images/podium.avif";
 
 const Configurator = () => {
   const navigate = useNavigate();
@@ -113,7 +113,7 @@ const Configurator = () => {
     setCurrentImage(currentImage); // Met à jour l'image dans le contexte global
   }, [currentImage, setCurrentImage]); // Dépendances
 
-    const fetchModelData = async () => {
+  const fetchModelData = async () => {
     try {
       const response = await fetch("http://localhost:8000/options");
       if (!response.ok) {
@@ -197,7 +197,7 @@ const Configurator = () => {
           backgroundImage: `url(${currentImage})`,
           backgroundSize: "80%",
           backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
+          backgroundPosition: "20% 65%",
         }}></div>
 
       <SelectorConfigurator />
