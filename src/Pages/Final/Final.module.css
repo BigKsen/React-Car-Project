@@ -1,1 +1,24 @@
- 
+.finalContainer {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  gap: 5%;
+}
+
+.finalContainerP {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;
+}
+
+.finalContainerImg {
+  width: 22%;
+  height: auto;
+}

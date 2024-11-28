@@ -15,7 +15,7 @@ h2 {
 .formContainer {
   color: black;
   width: 100vw;
-  height: 68vh;
+  height: 65vh;
   display: flex;
   justify-content: space-between; /* Place les conteneurs à gauche et à droite */
   align-items: flex-start;
@@ -40,7 +40,7 @@ h2 {
   width: 100%;
   height: 5%;
   margin: 0;
-  margin-bottom: 1%;
+  margin-bottom: 4%;
   text-align: center;
 }
 
@@ -56,40 +56,90 @@ h2 {
 }
 
 .detailsTable > tbody > tr > td {
-    width: 200px;
+  width: 200px;
 }
-
 
 /* Conteneur pour les données personnelles */
 .personalDataContainer {
   width: 40%; /* Réduit la largeur pour garder un espacement équilibré */
-  height: 90%;
+  height: 100%;
   padding: 20px;
-  padding-bottom: 0;
-}
-
-/* Formulaire avec disposition en colonne */
-form {
-  font-family: "GothamOfficeRegular";
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 5px; /* Ajout d'espacement entre chaque ligne du formulaire */
-}
-
-form > label {
-  margin-left: -30%;
-}
-
-/* Boutons */
-.bookingFormBtns {
-  width: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
-strong {
-  font-size: 1.1em;
+/* Formulaire avec disposition en colonne */
+.personalDataContainerForm {
+  width: 70%;
+  height: 100%;
+  font-family: "GothamOfficeRegular";
+  display: flex;
+  flex-direction: column;
+  padding-top: 10%;
+  gap: 30px; /* Ajout d'espacement entre chaque ligne du formulaire */
 }
+
+.bookingFormRow {
+  display: flex;
+  align-items: center; /* Alignement vertical */
+  justify-content: space-between; /* Équilibre l'espace entre label et input */
+  width: 100%; /* S'adapte au conteneur parent */
+}
+
+/* Labels */
+.bookingFormRow > label {
+  flex: 0 0 30%; /* Les labels occupent 30% de la largeur */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-right: 10px; /* Espace entre le label et l'input */
+}
+
+
+/* Inputs */
+.bookingFormRow > input {
+  flex: 1; /* Les inputs occupent tout l'espace restant */
+  outline: none;
+  transition: border-color 0.3s ease;
+  padding: 0.5rem; /* Espacement interne pour le select */
+    border: 1px solid #ccc; /* Bordure */
+    border-radius: 4px; /* Coins arrondis pour un design moderne */
+    font-family: "GothamOfficeRegular";
+    background-color: rgb(240, 240, 240); /* Couleur de fond plus douce */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+
+.bookingFormRow > input:focus {
+  border-color: #b3911f; /* Mettre en valeur le champ au focus */
+}
+
+
+/* Boutons */
+.bookingFormBtns {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly; /* Espacement égal entre les boutons */
+}
+
+.bookingFormBtns > button {
+  width: 35%; /* Taille fixe pour chaque bouton */
+  height: 50%;
+  padding: 10px;
+}
+
+.bookingFormBtns > button:hover {
+  background-color: #B3911F;
+}
+
+
+
+
+
+
+
+

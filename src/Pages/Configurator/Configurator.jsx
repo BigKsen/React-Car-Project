@@ -198,6 +198,7 @@ const Configurator = () => {
           backgroundSize: "80%",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "20% 65%",
+          transition: "0.4s ease-in-out",
         }}></div>
 
       <SelectorConfigurator />
