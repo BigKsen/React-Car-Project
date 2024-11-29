@@ -432,5 +432,22 @@
       "emailContact": "k@hotmail.com",
       "messageContact": "sdbvqsdvg"
     }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "Nina",
+      "secondName": "Kasianova",
+      "tel": "sdgsdg",
+      "email": "ksenia.kozjanova@hotmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "Mercedes-Benz",
+      "selectedModel": "CLE",
+      "selectedExterior": "Black",
+      "selectedInterior": "Camel",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "Matrix LED"
+    }
   }
 ]
