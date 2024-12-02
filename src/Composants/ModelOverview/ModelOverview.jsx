@@ -48,7 +48,7 @@ const ModelOverview = ({
             <h2
               className={selectedTab === "creation" ? style.selected : ""}
               onClick={() => handleTabClick("creation")}>
-              Création
+              Creation
             </h2>
             <h2
               className={selectedTab === "design" ? style.selected : ""}

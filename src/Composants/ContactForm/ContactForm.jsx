@@ -28,7 +28,7 @@ const ContactForm = () => {
 
     // Créer un objet qui inclut le titre et les données du formulaire
     const dataToSend = {
-      title: "CONTACT Request", // Ajouter le titre ici
+      title: "CONTACT Request",
       formData, // Inclure les données du formulaire
     };
 

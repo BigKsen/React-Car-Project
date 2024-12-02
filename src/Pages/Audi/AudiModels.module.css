@@ -1,12 +1,11 @@
 .mainAudiModels {
-  width: 100vw;
-  height: 75vh;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items: center;
-  color: black;
-  font-family: "GothamOfficeRegular";
-  font-size: 1em;
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    color: black;
+    font-family: "GothamOfficeRegular";
+    font-size: 1em;
 }
-

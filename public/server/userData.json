@@ -449,5 +449,22 @@
       "selectedWheels": "22\"",
       "selectedHighlights": "Matrix LED"
     }
+  },
+  {
+    "title": "BOOKING Request",
+    "formData": {
+      "firstName": "scb<wxb",
+      "secondName": "xv<sxv",
+      "tel": "<xv<xsv",
+      "email": "dupont@gmail.com"
+    },
+    "selectedData": {
+      "selectedBrand": "Mercedes-Benz",
+      "selectedModel": "GLE",
+      "selectedExterior": "White",
+      "selectedInterior": "Black",
+      "selectedWheels": "22\"",
+      "selectedHighlights": "Matrix LED"
+    }
   }
 ]
